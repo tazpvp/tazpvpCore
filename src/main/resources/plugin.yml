@@ -6,3 +6,16 @@ prefix: [ tazpvpCore ]
 authors: [ rownox, Ntdi, BubbleGum ]
 description: Tazpvp's core plugin
 website: tazpvp.net
+commands:
+  gmc:
+    description: "Gives you creative mode"
+    usage: /gmc
+  gma:
+    description: "Gives you adventure mode"
+    usage: /gma
+  gms:
+    description: "Gives you survival mode"
+    usage: /gms
+  gmsp:
+    description: "Gives you spectator mode"
+    usage: /gmsp
