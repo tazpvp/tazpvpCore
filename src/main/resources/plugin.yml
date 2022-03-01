@@ -1,0 +1,8 @@
+name: TazpvpCore
+version: '${project.version}'
+main: net.tazpvp.tazpvpcore.TazpvpCore
+api-version: 1.18
+prefix: [ tazpvpCore ]
+authors: [ rownox, Ntdi, BubbleGum ]
+description: Tazpvp's core plugin
+website: tazpvp.net
