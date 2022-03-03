@@ -1,6 +1,6 @@
 package net.tazpvp.tazpvpcore;
 
-import net.tazpvp.tazpvpcore.commands.gmCommand;
+import net.tazpvp.tazpvpcore.commands.admin.gmCommand;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
