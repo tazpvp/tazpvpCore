@@ -15,7 +15,7 @@ public class healCommand implements CommandExecutor {
         if (commandSender instanceof Player p) {
             if (p.hasPermission("tazpvp.heal")) {
                 if (args.length < 1) {
-                    p.setHealth(20);
+                    p.setHealth(p.getAttribute(Attribute.GENERIC_MAX_HEALTH).getValue());
                     p.setFoodLevel(20);
                     for (PotionEffect effect : p.getActivePotionEffects()) {
                         p.removePotionEffect(effect.getType());

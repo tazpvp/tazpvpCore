@@ -24,6 +24,8 @@ public final class TazpvpCore extends JavaPlugin {
 
     public void registerCommands(){
 
+
+
     }
 
     public void registerEvents(){
