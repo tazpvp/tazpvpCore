@@ -15,21 +15,21 @@ public class healCommand implements CommandExecutor {
         if (commandSender instanceof Player p) {
             if (p.hasPermission("tazpvp.heal")) {
                 if (args.length < 1) {
-                    p.setHealth(p.getAttribute(Attribute.GENERIC_MAX_HEALTH).getValue());
-                    p.setFoodLevel(20);
-                    for (PotionEffect effect : p.getActivePotionEffects()) {
-                        p.removePotionEffect(effect.getType());
-                    }
+                    healPlayer(p);
                 } else if (args.length == 1) {
-                    Player targetP = Bukkit.getServer().getPlayer(args[0]);
-                    p.setHealth(20);
-                    targetP.setFoodLevel(20);
-                    for (PotionEffect effect : targetP.getActivePotionEffects()) {
-                        targetP.removePotionEffect(effect.getType());
-                    }
+                    Player target = Bukkit.getServer().getPlayer(args[0]);
+                    healPlayer(target);
                 }
             }
         }
         return true;
+    }
+
+    public void healPlayer(Player p) {
+        p.setHealth(p.getAttribute(Attribute.GENERIC_MAX_HEALTH).getValue());
+        p.setFoodLevel(20);
+        for (PotionEffect effect : p.getActivePotionEffects()) {
+            p.removePotionEffect(effect.getType());
+        }
     }
 }
