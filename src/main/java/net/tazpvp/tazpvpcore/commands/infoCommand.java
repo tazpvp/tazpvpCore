@@ -12,9 +12,21 @@ public class infoCommand {
         Player p = e.getPlayer();
         if (e.getCommands().size() == 1) {
             if (e.getCommands().contains("help")) {
-                p.sendMessage(ChatColor.GOLD + "You are now in " + ChatColor.RED + "Creative");
+                p.sendMessage(ChatColor.AQUA + "-----" + ChatColor.DARK_AQUA + "-----" + ChatColor.AQUA + "-----" + ChatColor.RED + ChatColor.BOLD + "" + "TAZSPREE " + ChatColor.AQUA + "-----" + ChatColor.DARK_AQUA + "-----" + ChatColor.AQUA + "-----\n" +
+                        ChatColor.YELLOW + "Gain EXP from daily rewards, dealing damage,\n" +
+                        ChatColor.YELLOW + "achievements, and killing mobs or players.\n" +
+                        ChatColor.YELLOW + "\n" +
+                        ChatColor.GOLD + "Gain money from killing, achievements, streaks,\n" +
+                        ChatColor.GOLD + "mining, and daily rewards to use at the shop\n" +
+                        ChatColor.YELLOW + "\n" +
+                        ChatColor.RED + "Get up to five extra hearts from streaks,\n" +
+                        ChatColor.RED + "rebirthing, or getting the \"fat\" perk.\n" +
+                        ChatColor.YELLOW + "\n" +
+                        ChatColor.DARK_AQUA + "All inventory items are lost on death.\n" +
+                        ChatColor.GREEN + "PAGE [1/2]" + ChatColor.GRAY + "/help2 for next page."
+                );
             } else if (e.getCommands().contains("help2")) {
-                p.sendMessage(ChatColor.AQUA + "-----" + ChatColor.DARK_AQUA + "-----" + ChatColor.AQUA + "-----" + ChatColor.RED + ChatColor.BOLD + "" + "TAZPVP " + ChatColor.AQUA + "-----" + ChatColor.DARK_AQUA + "-----" + ChatColor.AQUA + "-----\n" +
+                p.sendMessage(ChatColor.AQUA + "-----" + ChatColor.DARK_AQUA + "-----" + ChatColor.AQUA + "-----" + ChatColor.RED + ChatColor.BOLD + "" + "TAZSPREE " + ChatColor.AQUA + "-----" + ChatColor.DARK_AQUA + "-----" + ChatColor.AQUA + "-----\n" +
                         ChatColor.WHITE + "/report " + ChatColor.GRAY + "Report rule breakers.\n" +
                         ChatColor.WHITE + "/apply " + ChatColor.GRAY + "Apply for a staff position.\n" +
                         ChatColor.WHITE + "/spawn " + ChatColor.GRAY + "Teleport back to the spawn.\n" +
