@@ -28,3 +28,6 @@ commands:
   invsee:
     description: "Opens your inventory"
     usage: /invsee
+  playtime:
+    description: "Shows your playtime"
+    usage: /playtime
