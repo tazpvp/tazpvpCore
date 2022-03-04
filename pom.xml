@@ -27,6 +27,7 @@
                 <configuration>
                     <source>16</source>
                     <target>16</target>
+                    <outputFileName>tazpvpCore</outputFileName>
                 </configuration>
             </plugin>
             <plugin>

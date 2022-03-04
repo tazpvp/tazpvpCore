@@ -19,3 +19,12 @@ commands:
   gmsp:
     description: "Gives you spectator mode"
     usage: /gmsp
+  fly:
+    description: "Toggles your flight"
+    usage: /fly
+  heal:
+    description: "Heals you"
+    usage: /heal
+  invsee:
+    description: "Opens your inventory"
+    usage: /invsee
