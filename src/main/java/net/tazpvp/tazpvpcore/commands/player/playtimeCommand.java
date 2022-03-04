@@ -30,6 +30,9 @@ public class playtimeCommand implements CommandExecutor {
                     player.sendMessage(ChatColor.GREEN + target.getName() + "'s playtime is " + ChatColor.WHITE + stringUtils.secondsToDDHHMMSS(seconds));
                 }
             }
+
+        }  else {
+            player.sendMessage(ChatColor.RED + args[0]+" is not a valid player name.");
         }
         return true;
     }

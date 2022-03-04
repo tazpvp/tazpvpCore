@@ -17,7 +17,7 @@ public final class TazpvpCore extends JavaPlugin {
     @Override
     public void onEnable() {
         instance = this;
-        Bukkit.getLogger().info(" TazpvpCore has been enabled!");
+        Bukkit.getLogger().info(" TazpvpCore is enabled!");
 
         registerCommands();
         registerEvents();
