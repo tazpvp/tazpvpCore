@@ -13,7 +13,11 @@ public class speedCommand implements CommandExecutor {
 
         if (commandSender instanceof Player p) {
             if (p.hasPermission("tazpvp.heal")) {
-                if (args.length == 1) {
+                if (args.length == 0) {
+                    float b = (float) 0.2;
+                    p.setWalkSpeed(b);
+                    p.setFlySpeed(b);
+                } else if (args.length == 1) {
                     double speed = Integer.parseInt(args[0]);
                     speed(p, speed);
                 } else if (args.length == 2) {
@@ -31,7 +35,7 @@ public class speedCommand implements CommandExecutor {
     }
 
     public void speed(Player p, double speed){
-        if (speed < 10) {
+        if (speed <= 10) {
             double value = speed / 10;
             float a = (float) value;
             p.setWalkSpeed(a);
