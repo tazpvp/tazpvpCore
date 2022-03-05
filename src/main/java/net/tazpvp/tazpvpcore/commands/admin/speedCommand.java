@@ -14,9 +14,8 @@ public class speedCommand implements CommandExecutor {
         if (commandSender instanceof Player p) {
             if (p.hasPermission("tazpvp.heal")) {
                 if (args.length == 0) {
-                    float b = (float) 0.2;
-                    p.setWalkSpeed(b);
-                    p.setFlySpeed(b);
+                    p.setWalkSpeed((float) 0.2);
+                    p.setFlySpeed((float) 0.1);
                     p.sendMessage(ChatColor.GOLD + "Speed: " + ChatColor.RED + "Default");
                 } else if (args.length == 1) {
                     double speed = Integer.parseInt(args[0]);
