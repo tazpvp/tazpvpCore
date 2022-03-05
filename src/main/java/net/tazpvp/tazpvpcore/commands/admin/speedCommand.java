@@ -10,7 +10,6 @@ import org.bukkit.entity.Player;
 public class speedCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] args) {
-
         if (commandSender instanceof Player p) {
             if (p.hasPermission("tazpvp.heal")) {
                 if (args.length == 0) {
@@ -32,7 +31,7 @@ public class speedCommand implements CommandExecutor {
     public void speed(Player p, String arg){
         double speed = Integer.parseInt(arg);
         int val = Integer.parseInt(arg);
-        if (arg != "default") {
+        if (arg != null) {
             if (speed <= 10) {
                 double value = speed / 10;
                 float a = (float) value;
