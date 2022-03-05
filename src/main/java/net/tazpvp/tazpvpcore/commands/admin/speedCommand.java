@@ -20,13 +20,13 @@ public class speedCommand implements CommandExecutor {
                 } else if (args.length == 1) {
                     double speed = Integer.parseInt(args[0]);
                     int val = Integer.parseInt(args[0]);
-                    speed(p, speed, val, args.length);
+                    speed(p, speed, val);
                 } else if (args.length == 2) {
                     Player target = Bukkit.getServer().getPlayer(args[0]);
                     if(target != null) {
                         double speed = Integer.parseInt(args[1]);
                         int val = Integer.parseInt(args[0]);
-                        speed(target, speed, val, args.length);
+                        speed(target, speed, val);
                     }
                 } else {
                     return false;
@@ -36,13 +36,13 @@ public class speedCommand implements CommandExecutor {
         return true;
     }
 
-    public void speed(Player p, double speed, int val, int length){
+    public void speed(Player p, double speed, int val){
         if (speed <= 10) {
             double value = speed / 10;
             float a = (float) value;
             p.setWalkSpeed(a);
             p.setFlySpeed(a);
-            p.sendMessage(ChatColor.GOLD + "Speed: " + ChatColor.RED + length);
+            p.sendMessage(ChatColor.GOLD + "Speed: " + ChatColor.RED + val);
         } else {
             p.sendMessage(ChatColor.RED + "Maximum value: 10");
         }
