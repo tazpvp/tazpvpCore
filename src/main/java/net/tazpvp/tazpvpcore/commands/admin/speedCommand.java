@@ -14,21 +14,27 @@ public class speedCommand implements CommandExecutor {
         if (commandSender instanceof Player p) {
             if (p.hasPermission("tazpvp.heal")) {
                 if (args.length == 1) {
-                    int speed = Integer.parseInt(args[0]);
-                    p.setWalkSpeed(speed);
-                    p.setFlySpeed(speed);
-                    p.sendMessage(ChatColor.GOLD + "Speed: " + ChatColor.RED + speed);
+                    double speed = Integer.parseInt(args[0]);
+                    speed(p, speed);
                 } else if (args.length == 2) {
                     Player target = Bukkit.getServer().getPlayer(args[0]);
-                    int speed = Integer.parseInt(args[1]);
-                    target.setWalkSpeed(speed);
-                    target.setFlySpeed(speed);
-                    target.sendMessage(ChatColor.GOLD + "Speed: " + ChatColor.RED + speed);
+                    if(target != null) {
+                        double speed = Integer.parseInt(args[1]);
+                        speed(target, speed);
+                    }
                 } else {
                     return false;
                 }
             }
         }
         return true;
+    }
+
+    public void speed(Player p, double speed){
+        double value = speed / 10;
+        float a = (float) value;
+        p.setWalkSpeed(a);
+        p.setFlySpeed(a);
+        p.sendMessage(ChatColor.GOLD + "Speed: " + ChatColor.RED + speed);
     }
 }
