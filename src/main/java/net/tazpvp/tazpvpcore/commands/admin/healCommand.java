@@ -18,7 +18,9 @@ public class healCommand implements CommandExecutor {
                     healPlayer(p);
                 } else if (args.length == 1) {
                     Player target = Bukkit.getServer().getPlayer(args[0]);
-                    healPlayer(target);
+                    if (target != null) {
+                        healPlayer(target);
+                    }
                 }
             }
         }
