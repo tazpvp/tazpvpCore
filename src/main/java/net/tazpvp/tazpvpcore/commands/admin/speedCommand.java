@@ -11,15 +11,15 @@ public class speedCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] args) {
         if (commandSender instanceof Player p) {
-            if (p.hasPermission("tazpvp.heal")) {
+            if (p.hasPermission("tazpvp.speed")) {
                 if (args.length == 0) {
-                    speed(p, "default");
+                    speed(p, 0);
                 } else if (args.length == 1) {
-                    speed(p, args[0]);
+                    speed(p, Integer.parseInt(args[0]));
                 } else if (args.length == 2) {
                     Player target = Bukkit.getServer().getPlayer(args[0]);
                     if(target != null) {
-                        speed(target, args[1]);
+                        speed(target, Integer.parseInt(args[1]));
                     }
                 } else {
                     return false;
@@ -28,16 +28,13 @@ public class speedCommand implements CommandExecutor {
         }
         return true;
     }
-    public void speed(Player p, String arg){
-        double speed = Integer.parseInt(arg);
-        int val = Integer.parseInt(arg);
-        if (arg != null) {
+    public void speed(Player p, double speed){
+        if (speed != 0) {
             if (speed <= 10) {
-                double value = speed / 10;
-                float a = (float) value;
+                float a = (float) (speed / 10);
                 p.setWalkSpeed(a);
                 p.setFlySpeed(a);
-                p.sendMessage(ChatColor.GOLD + "Speed: " + ChatColor.RED + val);
+                p.sendMessage(ChatColor.GOLD + "Speed: " + ChatColor.RED + speed);
             } else {
                 p.sendMessage(ChatColor.RED + "Maximum value: 10");
             }
