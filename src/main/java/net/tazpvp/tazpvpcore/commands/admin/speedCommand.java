@@ -15,11 +15,11 @@ public class speedCommand implements CommandExecutor {
                 if (args.length == 0) {
                     speed(p, 0);
                 } else if (args.length == 1) {
-                    speed(p, Integer.parseInt(args[0]));
+                    speed(p, Double.parseDouble(args[0]));
                 } else if (args.length == 2) {
                     Player target = Bukkit.getServer().getPlayer(args[0]);
                     if(target != null) {
-                        speed(target, Integer.parseInt(args[1]));
+                        speed(target, Double.parseDouble(args[1]));
                     }
                 } else {
                     return false;
