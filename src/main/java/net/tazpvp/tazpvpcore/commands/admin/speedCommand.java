@@ -31,10 +31,14 @@ public class speedCommand implements CommandExecutor {
     }
 
     public void speed(Player p, double speed){
-        double value = speed / 10;
-        float a = (float) value;
-        p.setWalkSpeed(a);
-        p.setFlySpeed(a);
-        p.sendMessage(ChatColor.GOLD + "Speed: " + ChatColor.RED + speed);
+        if (speed < 10) {
+            double value = speed / 10;
+            float a = (float) value;
+            p.setWalkSpeed(a);
+            p.setFlySpeed(a);
+            p.sendMessage(ChatColor.GOLD + "Speed: " + ChatColor.RED + speed);
+        } else {
+            p.sendMessage(ChatColor.RED + "Maximum value: 10");
+        }
     }
 }
