@@ -54,3 +54,7 @@ commands:
     usage: /clearchat
     aliases:
       - cc
+  speed:
+    description: "sets fly and walk speed"
+    permission: tazpvp.speed
+    usage: /speed <number>

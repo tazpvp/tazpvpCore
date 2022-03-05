@@ -39,6 +39,7 @@ public final class TazpvpCore extends JavaPlugin {
         getCommand("playtime").setExecutor(new playtimeCommand());
         getCommand("tp").setExecutor(new tpCommand());
         getCommand("clearchat").setExecutor(new clearchatCommand());
+        getCommand("speed").setExecutor(new speedCommand());
 
 
     }
