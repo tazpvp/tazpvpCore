@@ -9,25 +9,48 @@ website: tazpvp.net
 commands:
   gmc:
     description: "Gives you creative mode"
+    permission: tazpvp.gmc
     usage: /gmc
   gma:
     description: "Gives you adventure mode"
+    permission: tazpvp.gma
     usage: /gma
   gms:
     description: "Gives you survival mode"
+    permission: tazpvp.gms
     usage: /gms
   gmsp:
     description: "Gives you spectator mode"
+    permission: tazpvp.gmsp
     usage: /gmsp
   fly:
     description: "Toggles your flight"
+    permission: tazpvp.fly
     usage: /fly
   heal:
     description: "Heals you"
+    permission: tazpvp.heal
     usage: /heal
   invsee:
     description: "Opens your inventory"
+    permission: tazpvp.invsee
     usage: /invsee
+    aliases:
+      - inv
   playtime:
     description: "Shows your playtime"
     usage: /playtime
+    aliases:
+      - pt
+  tp:
+    description: "fast travel"
+    permission: tazpvp.tp
+    usage: /teleport
+    aliases:
+      - tp
+  clearchat:
+    description: "clears thee chat"
+    permission: tazpvp.clearchat
+    usage: /clearchat
+    aliases:
+      - cc

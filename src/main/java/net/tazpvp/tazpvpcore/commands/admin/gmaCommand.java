@@ -9,7 +9,7 @@ import org.bukkit.entity.Player;
 public class gmaCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
-        if (commandSender.hasPermission("tazpvp.staff.gmc")) {
+        if (commandSender.hasPermission("tazpvp.gmc")) {
             if (commandSender instanceof Player p) {
                 p.setGameMode(GameMode.ADVENTURE);
             }
