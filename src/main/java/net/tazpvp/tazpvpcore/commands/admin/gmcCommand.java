@@ -1,7 +1,6 @@
 package net.tazpvp.tazpvpcore.commands.admin;
 
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
