@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
 
-public class stringUtils {
+public class StringUtils {
     public static String buildString(String[] args, int start) {
         StringBuilder stringBuilder = new StringBuilder();
         for(int i = start; i < args.length; i++) {

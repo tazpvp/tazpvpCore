@@ -58,3 +58,7 @@ commands:
     description: "sets fly and walk speed"
     permission: tazpvp.speed
     usage: /speed <number>
+  alert:
+    description: "Broadcast a message."
+    permission: tazpvp.speed
+    usage: /speed <number>

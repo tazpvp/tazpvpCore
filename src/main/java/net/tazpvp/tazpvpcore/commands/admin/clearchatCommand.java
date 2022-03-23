@@ -17,17 +17,13 @@ public class clearchatCommand implements CommandExecutor {
                        for (int i = 0; i<100; ++i ){
                            player.sendMessage(" ");
                        }
-
-                   } else{
-                       player.sendMessage(ChatColor.GREEN + "Chat full of empty spaces");
+                   } else {
+                       return false;
                    }
                 }
 
             }
         }
-
-
-
         return true;
     }
 }
