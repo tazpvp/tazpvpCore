@@ -16,7 +16,7 @@ public class invseeCommand implements CommandExecutor, Listener {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(sender instanceof Player p) {
-            if(p.hasPermission("tazpvp.invsee")){
+            if(p.hasPermission("tazpvp.invsee") || p.hasPermission("tazpvp.*")){
                 if(args.length == 1) {
                     Player targetPlayer = Bukkit.getServer().getPlayer(args[0]);
                     Inventory targetInv = targetPlayer.getInventory();

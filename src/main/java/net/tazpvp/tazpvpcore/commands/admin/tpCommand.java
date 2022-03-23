@@ -13,7 +13,7 @@ public class tpCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof Player p) {
-            if (p.hasPermission("tazpvp.tp")) {
+            if (p.hasPermission("tazpvp.tp") || p.hasPermission("tazpvp.*")) {
                 if (args.length == 1) {
                     if (Bukkit.getPlayer(args[0]) != null) {
                         Player target = Bukkit.getPlayer(args[0]);

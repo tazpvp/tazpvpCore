@@ -13,7 +13,7 @@ public class healCommand implements CommandExecutor {
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] args) {
 
         if (commandSender instanceof Player p) {
-            if (p.hasPermission("tazpvp.heal")) {
+            if (p.hasPermission("tazpvp.heal") || p.hasPermission("tazpvp.*")) {
                 if (args.length < 1) {
                     healPlayer(p);
                 } else if (args.length == 1) {

@@ -11,7 +11,7 @@ public class speedCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] args) {
         if (commandSender instanceof Player p) {
-            if (p.hasPermission("tazpvp.speed")) {
+            if (p.hasPermission("tazpvp.speed") || p.hasPermission("tazpvp.*")) {
                 if (args.length == 0) {
                     speed(p, 0);
                 } else if (args.length == 1) {
