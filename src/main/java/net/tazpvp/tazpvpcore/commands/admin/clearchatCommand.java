@@ -11,7 +11,7 @@ public class clearchatCommand implements CommandExecutor {
     @Override
     public boolean onCommand (CommandSender sender, Command command, String label, String[] args){
         if (sender instanceof Player p){
-            if (p != null && p.hasPermission("tazpvp.clearchat")){
+            if (p.hasPermission("tazpvp.clearchat") || p.hasPermission("tazpvp.*")){
                 for (Player player : Bukkit.getOnlinePlayers()){
                    if (!player.hasPermission("tazpvp.clearchat")){
                        for (int i = 0; i<100; ++i ){
