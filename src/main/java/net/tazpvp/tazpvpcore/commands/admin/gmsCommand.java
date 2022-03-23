@@ -19,7 +19,7 @@ public class gmsCommand implements CommandExecutor {
                     gmUser(p, GameMode.SURVIVAL);
                 } else if (args.length == 1) {
                     Player target = Bukkit.getServer().getPlayer(args[0]);
-                    if (p.hasPermission("tazpvp.gm.others") || p.hasPermission("tazpvp.*")) {
+                    if (p.hasPermission("tazpvp.gm.others")) {
                         if (target != null) {
                             gmUser(target, GameMode.SURVIVAL);
                         }

@@ -20,7 +20,7 @@ public class flyCommand implements CommandExecutor {
                     }
                 } else if (args.length == 1) {
                     Player target = Bukkit.getServer().getPlayer(args[0]);
-                    if (p.hasPermission("tazpvp.fly.others") || p.hasPermission("tazpvp.*") && target != null) {
+                    if (p.hasPermission("tazpvp.fly.others") && target != null) {
                         if (target.getAllowFlight()) {
                             unfly(target);
                         } else {
