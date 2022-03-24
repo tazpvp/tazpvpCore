@@ -31,7 +31,7 @@ public class pmCommand implements CommandExecutor, Listener{
                 if (target == null) {
                     p.sendMessage(ChatColor.RED + "This player does not exist.");
                 } else if (target.getName().equals(p.getName())) {
-                    p.sendMessage(ChatColor.RED + "You cannot PM yourself!");
+                    p.sendMessage(ChatColor.RED + "You cannot private message yourself!");
                 } else {
                     String msg = StringUtils.buildString(args, 1);
                     target.sendMessage( ChatColor.DARK_AQUA + "From " + ChatColor.AQUA + p.getName() + ": "  + ChatColor.WHITE + msg);
