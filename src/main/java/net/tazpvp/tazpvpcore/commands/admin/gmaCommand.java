@@ -1,7 +1,7 @@
 package net.tazpvp.tazpvpcore.commands.admin;
 
+import net.tazpvp.tazpvpcore.utils.PlayerUtils;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -14,21 +14,17 @@ public class gmaCommand implements CommandExecutor {
         if (commandSender.hasPermission("tazpvp.gma") || commandSender.hasPermission("tazpvp.*")) {
             if (commandSender instanceof Player p) {
                 if (args.length < 1) {
-                    gmUser(p, GameMode.ADVENTURE);
+                    PlayerUtils.gmUser(p, GameMode.ADVENTURE);
                 } else if (args.length == 1) {
                     Player target = Bukkit.getServer().getPlayer(args[0]);
                     if (p.hasPermission("tazpvp.gm.others")) {
                         if (target != null) {
-                            gmUser(target, GameMode.ADVENTURE);
+                            PlayerUtils.gmUser(target, GameMode.ADVENTURE);
                         }
                     }
                 }
             }
         }
         return true;
-    }
-    public static void gmUser(Player p, GameMode gm){
-        p.setGameMode(gm);
-        p.sendMessage(ChatColor.GOLD + "Gamemode: " + ChatColor.RED + gm);
     }
 }

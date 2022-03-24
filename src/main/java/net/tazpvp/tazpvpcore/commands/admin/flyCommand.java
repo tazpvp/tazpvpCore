@@ -34,10 +34,10 @@ public class flyCommand implements CommandExecutor {
     }
     public void fly(Player p) {
         p.setAllowFlight(true);
-        p.sendMessage(ChatColor.GOLD + "Flying: " + ChatColor.RED + "enabled");
+        p.sendMessage(ChatColor.GOLD + "Flight: " + ChatColor.RED + "enabled");
     }
     public void unfly(Player p) {
         p.setAllowFlight(false);
-        p.sendMessage(ChatColor.GOLD + "Flying: " + ChatColor.RED + "disabled");
+        p.sendMessage(ChatColor.GOLD + "Flight: " + ChatColor.RED + "disabled");
     }
 }
