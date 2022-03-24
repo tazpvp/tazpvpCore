@@ -6,6 +6,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public final class TazpvpCore extends JavaPlugin {
@@ -13,6 +14,8 @@ public final class TazpvpCore extends JavaPlugin {
     public static final HashMap<Player, Boolean> inInvseeGui = new HashMap<>();
 
     public static TazpvpCore instance;
+
+    public static final ArrayList<Player> newPm = new ArrayList<>();
 
     @Override
     public void onEnable() {
