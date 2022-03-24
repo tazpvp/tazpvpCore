@@ -12,20 +12,16 @@ import org.bukkit.entity.Player;
 public class alertCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if(sender instanceof Player p){
-            if(args.length > 0) {
-                if(p.hasPermission("tazpvp.alert") || p.hasPermission("tazpvp.*")){
-                    alert(args);
-                }
-            } else {
-                return false;
-            }
+        if(args.length > 0) {
+            if(sender.hasPermission("tazpvp.alert") || sender.hasPermission("tazpvp.*")){
+                alert(args);
+            } 
         } else {
-            alert(args);
+            return false;
         }
         return true;
     }
-    public static void alert(String[] ar) {
+    public void alert(String[] ar) {
         Bukkit.broadcastMessage(ChatColor.DARK_GRAY+" ["+ChatColor.RED+"ALERT"+ChatColor.DARK_GRAY+"] " + ChatColor.GREEN + StringUtils.buildString(ar, 0));
         for (Player p : Bukkit.getOnlinePlayers()) {
             p.playSound(p.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1, 1);
