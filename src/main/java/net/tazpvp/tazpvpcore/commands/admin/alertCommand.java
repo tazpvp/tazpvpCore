@@ -22,7 +22,7 @@ public class alertCommand implements CommandExecutor {
         return true;
     }
     public void alert(String[] ar) {
-        Bukkit.broadcastMessage(ChatColor.DARK_GRAY+" ["+ChatColor.RED+"ALERT"+ChatColor.DARK_GRAY+"] " + ChatColor.GREEN + StringUtils.buildString(ar, 0));
+        Bukkit.broadcastMessage(ChatColor.DARK_GRAY+"["+ChatColor.RED+"ALERT"+ChatColor.DARK_GRAY+"] " + ChatColor.GREEN + StringUtils.buildString(ar, 0));
         for (Player p : Bukkit.getOnlinePlayers()) {
             p.playSound(p.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1, 1);
         }

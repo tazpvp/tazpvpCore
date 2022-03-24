@@ -12,13 +12,13 @@ public class clearchatCommand implements CommandExecutor {
     public boolean onCommand (CommandSender sender, Command command, String label, String[] args){
         if (sender instanceof Player p){
             if (p.hasPermission("tazpvp.clearchat") || p.hasPermission("tazpvp.*")){
-                for (Player player : Bukkit.getOnlinePlayers()){
-                   if (!player.hasPermission("tazpvp.clearchat")){
+                for (Player pl : Bukkit.getOnlinePlayers()){
+                   if (!pl.hasPermission("tazpvp.clearchat")){
                        for (int i = 0; i<100; ++i ){
-                           player.sendMessage(" ");
+                           pl.sendMessage(" ");
                        }
                    } else {
-                       return false;
+                       pl.sendMessage(ChatColor.YELLOW + "Chat was cleared, but you are immune.");
                    }
                 }
 
