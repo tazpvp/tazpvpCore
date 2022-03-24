@@ -60,5 +60,11 @@ commands:
     usage: /speed <number>
   alert:
     description: "Broadcast a message."
-    permission: tazpvp.speed
-    usage: /speed <number>
+    permission: tazpvp.alert
+    usage: /alert <message>
+  pm:
+    description: "Send a private message."
+    usage: /pm <player> <message>
+    aliases:
+      - privatemessage
+      - dm
