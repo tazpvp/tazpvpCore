@@ -71,4 +71,4 @@ commands:
   ci:
     description: "Clear inventory"
     permission: tazpvp.ci
-    usage: /ci
+    usage: /ci [player]
