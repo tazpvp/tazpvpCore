@@ -68,3 +68,7 @@ commands:
     aliases:
       - privatemessage
       - dm
+  ci:
+    description: "Clear inventory"
+    permission: tazpvp.ci
+    usage: /ci
