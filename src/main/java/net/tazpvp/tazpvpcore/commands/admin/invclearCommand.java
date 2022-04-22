@@ -14,7 +14,7 @@ public class invclearCommand implements CommandExecutor {
             if (Bukkit.getPlayer(args[0]) != null) {
                 Player target = Bukkit.getPlayer(args[0]);
                 target.getInventory().clear();
-                sender.sendMessage(ChatColor.GOLD + "Cleared " + ChatColor.RED +  target.getName() + ChatColor.GOLD + "'s inventory");
+                sender.sendMessage(ChatColor.DARK_AQUA + "Cleared " + ChatColor.AQUA +  target.getName() + ChatColor.DARK_AQUA + "'s inventory");
             }
         } else {
             if (sender instanceof Player p) {
