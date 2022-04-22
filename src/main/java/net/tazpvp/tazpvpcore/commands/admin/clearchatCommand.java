@@ -18,7 +18,7 @@ public class clearchatCommand implements CommandExecutor {
                            pl.sendMessage(" ");
                        }
                    } else {
-                       pl.sendMessage(ChatColor.YELLOW + "Chat was cleared, but you are immune.");
+                       pl.sendMessage(ChatColor.DARK_AQUA + "Chat was cleared, but you are immune.");
                    }
                 }
             }
