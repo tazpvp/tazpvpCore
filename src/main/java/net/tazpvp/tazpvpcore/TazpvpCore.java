@@ -1,8 +1,8 @@
 package net.tazpvp.tazpvpcore;
 
 import net.tazpvp.tazpvpcore.commands.admin.*;
-import net.tazpvp.tazpvpcore.commands.player.playtimeCommand;
-import net.tazpvp.tazpvpcore.commands.player.pmCommand;
+import net.tazpvp.tazpvpcore.commands.player.playtimeCMD;
+import net.tazpvp.tazpvpcore.commands.player.pmCMD;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -33,20 +33,20 @@ public final class TazpvpCore extends JavaPlugin {
     }
 
     public void registerCommands(){
-        getCommand("fly").setExecutor(new flyCommand());
-        getCommand("gmc").setExecutor(new gmcCommand());
-        getCommand("gms").setExecutor(new gmsCommand());
-        getCommand("gma").setExecutor(new gmaCommand());
-        getCommand("gmsp").setExecutor(new gmspCommand());
-        getCommand("heal").setExecutor(new healCommand());
-        getCommand("invsee").setExecutor(new invseeCommand());
-        getCommand("playtime").setExecutor(new playtimeCommand());
-        getCommand("tp").setExecutor(new tpCommand());
-        getCommand("clearchat").setExecutor(new clearchatCommand());
-        getCommand("speed").setExecutor(new speedCommand());
-        getCommand("alert").setExecutor(new alertCommand());
-        getCommand("pm").setExecutor(new pmCommand());
-        getCommand("ci").setExecutor(new invclearCommand());
+        getCommand("fly").setExecutor(new flyCMD());
+        getCommand("gmc").setExecutor(new gmcCMD());
+        getCommand("gms").setExecutor(new gmsCMD());
+        getCommand("gma").setExecutor(new gmaCMD());
+        getCommand("gmsp").setExecutor(new gmspCMD());
+        getCommand("heal").setExecutor(new healCMD());
+        getCommand("invsee").setExecutor(new invseeCMD());
+        getCommand("playtime").setExecutor(new playtimeCMD());
+        getCommand("tp").setExecutor(new tpCMD());
+        getCommand("clearchat").setExecutor(new clearchatCMD());
+        getCommand("speed").setExecutor(new speedCMD());
+        getCommand("alert").setExecutor(new alertCMD());
+        getCommand("pm").setExecutor(new pmCMD());
+        getCommand("ci").setExecutor(new invclearCMD());
 
 
     }

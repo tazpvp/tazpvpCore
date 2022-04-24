@@ -21,7 +21,6 @@ public class nickCommand implements CommandExecutor {
                 nick(target, nick);
             }
         }
-
         return true;
     }
 

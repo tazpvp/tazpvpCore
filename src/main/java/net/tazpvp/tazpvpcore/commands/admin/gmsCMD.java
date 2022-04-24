@@ -8,18 +8,18 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class gmaCommand implements CommandExecutor {
+public class gmsCMD implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] args) {
-        if (commandSender.hasPermission("tazpvp.gma") || commandSender.hasPermission("tazpvp.*")) {
+        if (commandSender.hasPermission("tazpvp.gms") || commandSender.hasPermission("tazpvp.*")) {
             if (commandSender instanceof Player p) {
                 if (args.length < 1) {
-                    PlayerUtils.gmUser(p, GameMode.ADVENTURE);
+                    PlayerUtils.gmUser(p, GameMode.SURVIVAL);
                 } else if (args.length == 1) {
                     Player target = Bukkit.getServer().getPlayer(args[0]);
                     if (p.hasPermission("tazpvp.gm.others")) {
                         if (target != null) {
-                            PlayerUtils.gmUser(target, GameMode.ADVENTURE);
+                            PlayerUtils.gmUser(target, GameMode.SURVIVAL);
                         }
                     }
                 }
