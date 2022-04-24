@@ -11,6 +11,6 @@ public class PlayerUtils {
         String g = mode.toString();
         String gm = g.toLowerCase(Locale.ROOT);
         p.setGameMode(mode);
-        p.sendMessage(ChatColor.GOLD + "Gamemode: " + ChatColor.RED + gm);
+        p.sendMessage(ChatColor.DARK_AQUA + "Gamemode: " + ChatColor.AQUA + gm);
     }
 }

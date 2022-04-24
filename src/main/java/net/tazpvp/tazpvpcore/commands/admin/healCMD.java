@@ -1,6 +1,7 @@
 package net.tazpvp.tazpvpcore.commands.admin;
 
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -33,5 +34,6 @@ public class healCMD implements CommandExecutor {
         for (PotionEffect effect : p.getActivePotionEffects()) {
             p.removePotionEffect(effect.getType());
         }
+        p.sendMessage(ChatColor.DARK_AQUA + "You have been healed!");
     }
 }

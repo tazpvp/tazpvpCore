@@ -12,13 +12,15 @@ public class nickCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] args) {
         if (commandSender instanceof Player p) {
-            if (p.hasPermission("tazpvp.nick")) {
-                String nick = args[0];
-                nick(p, nick);
-            } else {
+            if (p.hasPermission("tazpvp.nick.others") || p.hasPermission("tazpvp.*")) {
                 String nick = args[1];
                 Player target = Bukkit.getServer().getPlayer(args[0]);
                 nick(target, nick);
+            } else if (p.hasPermission("tazpvp.nick")) {
+                String nick = args[0];
+                nick(p, nick);
+            } else {
+                p.sendMessage(ChatColor.RED + "You must purchase a rank to receive this permission.");
             }
         }
         return true;

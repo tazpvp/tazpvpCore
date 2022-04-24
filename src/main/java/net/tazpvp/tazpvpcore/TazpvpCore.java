@@ -46,7 +46,7 @@ public final class TazpvpCore extends JavaPlugin {
         getCommand("speed").setExecutor(new speedCMD());
         getCommand("alert").setExecutor(new alertCMD());
         getCommand("pm").setExecutor(new pmCMD());
-        getCommand("ci").setExecutor(new invclearCMD());
+        getCommand("clear").setExecutor(new invclearCMD());
 
 
     }

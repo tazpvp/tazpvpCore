@@ -68,7 +68,11 @@ commands:
     aliases:
       - privatemessage
       - dm
-  ci:
+  clear:
     description: "Clear inventory"
     permission: tazpvp.ci
     usage: /ci [player]
+  nick:
+    description: "Change nickname"
+    permission: tazpvp.nick
+    usage: /nick [player] [text]
