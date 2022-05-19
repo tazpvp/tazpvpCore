@@ -76,3 +76,5 @@ commands:
     description: "Change nickname"
     permission: tazpvp.nick
     usage: /nick [player] [text]
+  help:
+    description: "Receive instructions on how to play"

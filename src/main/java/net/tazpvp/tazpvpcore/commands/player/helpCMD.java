@@ -20,7 +20,6 @@ public class helpCMD implements CommandExecutor {
             ChatColor.DARK_AQUA + "All inventory items are lost on death.\n" +
             "" +
             ChatColor.GREEN + "[1/2]" + ChatColor.GRAY + " type '/help 2' for the next page.";
-
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] args) {
         if (commandSender instanceof Player p) {
