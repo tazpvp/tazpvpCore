@@ -18,7 +18,7 @@ public class tpCMD implements CommandExecutor {
                     if (Bukkit.getPlayer(args[0]) != null) {
                         Player target = Bukkit.getPlayer(args[0]);
                         p.teleport(target);
-                        p.sendMessage(ChatColor.GREEN + "Teleported to " + target.getName());
+                        p.sendMessage(ChatColor.DARK_AQUA + "Teleported to " + ChatColor.AQUA + target.getName());
                     } else if (Bukkit.getWorld(args[0]) != null) {
                         World w = Bukkit.getWorld(args[0]);
                         p.teleport(w.getSpawnLocation());
@@ -28,7 +28,7 @@ public class tpCMD implements CommandExecutor {
                         Player Header = Bukkit.getPlayer(args[0]);
                         Player target = Bukkit.getPlayer(args[1]);
                         Header.teleport(target);
-                        p.sendMessage(ChatColor.GREEN + "Teleported " + Header.getName() + " to " + target.getName());
+                        p.sendMessage(ChatColor.DARK_AQUA + "Teleported " + ChatColor.AQUA + Header.getName() + ChatColor.DARK_AQUA + " to " + ChatColor.AQUA + target.getName());
                     }
                 } else if (args.length == 3) {
                     int x = Integer.parseInt(args[0]);
