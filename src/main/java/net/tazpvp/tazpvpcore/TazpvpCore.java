@@ -1,9 +1,7 @@
 package net.tazpvp.tazpvpcore;
 
 import net.tazpvp.tazpvpcore.commands.admin.*;
-import net.tazpvp.tazpvpcore.commands.player.helpCMD;
-import net.tazpvp.tazpvpcore.commands.player.playtimeCMD;
-import net.tazpvp.tazpvpcore.commands.player.pmCMD;
+import net.tazpvp.tazpvpcore.commands.player.*;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -49,6 +47,8 @@ public final class TazpvpCore extends JavaPlugin {
         getCommand("pm").setExecutor(new pmCMD());
         getCommand("clear").setExecutor(new invclearCMD());
         getCommand("help").setExecutor(new helpCMD());
+        getCommand("apply").setExecutor(new applyCMD());
+        getCommand("appeal").setExecutor(new AppealCMD());
 
 
     }

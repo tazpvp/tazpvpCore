@@ -24,6 +24,4 @@ public class applyCMD implements CommandExecutor {
 
         return false;
     }
-
-
 }
