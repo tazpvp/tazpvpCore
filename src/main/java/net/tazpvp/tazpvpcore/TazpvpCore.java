@@ -31,27 +31,25 @@ public final class TazpvpCore extends JavaPlugin {
     }
 
     public void registerCommands(){
-        getCommand("fly").setExecutor(new flyCMD());
-        getCommand("gmc").setExecutor(new gmcCMD());
-        getCommand("gms").setExecutor(new gmsCMD());
-        getCommand("gma").setExecutor(new gmaCMD());
-        getCommand("gmsp").setExecutor(new gmspCMD());
-        getCommand("heal").setExecutor(new healCMD());
-        getCommand("invsee").setExecutor(new invseeCMD());
-        getCommand("playtime").setExecutor(new playtimeCMD());
-        getCommand("tp").setExecutor(new tpCMD());
-        getCommand("clearchat").setExecutor(new clearchatCMD());
-        getCommand("speed").setExecutor(new speedCMD());
-        getCommand("alert").setExecutor(new alertCMD());
-        getCommand("pm").setExecutor(new pmCMD());
-        getCommand("clear").setExecutor(new invclearCMD());
-        getCommand("help").setExecutor(new helpCMD());
-        getCommand("apply").setExecutor(new applyCMD());
+        getCommand("fly").setExecutor(new FlyCMD());
+        getCommand("gmc").setExecutor(new GmcCMD());
+        getCommand("gms").setExecutor(new GmsCMD());
+        getCommand("gma").setExecutor(new GmaCMD());
+        getCommand("gmsp").setExecutor(new GmspCMD());
+        getCommand("heal").setExecutor(new HealCMD());
+        getCommand("invsee").setExecutor(new InvSeeCMD());
+        getCommand("playtime").setExecutor(new PlayTimeCMD());
+        getCommand("tp").setExecutor(new TpCMD());
+        getCommand("clearchat").setExecutor(new ClearChatCMD());
+        getCommand("speed").setExecutor(new SpeedCMD());
+        getCommand("alert").setExecutor(new AlertCMD());
+        getCommand("pm").setExecutor(new PrivateMessageCMD());
+        getCommand("clear").setExecutor(new InvClearCMD());
+        getCommand("help").setExecutor(new HelpCMD());
+        getCommand("apply").setExecutor(new ApplyCMD());
         getCommand("appeal").setExecutor(new AppealCMD());
         getCommand("rules").setExecutor(new RulesCMD());
         getCommand("ad").setExecutor(new AdCMD());
-
-
     }
 
     public static TazpvpCore getInstance(){

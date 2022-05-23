@@ -8,7 +8,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class gmaCMD implements CommandExecutor {
+public class GmaCMD implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] args) {
         if (commandSender.hasPermission("tazpvp.gma") || commandSender.hasPermission("tazpvp.*")) {

@@ -6,7 +6,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class helpCMD implements CommandExecutor {
+public class HelpCMD implements CommandExecutor {
     String s1 = "" +
             ChatColor.YELLOW + "Gain EXP from daily rewards, dealing damage,\n" +
             ChatColor.YELLOW + "achievements, and killing mobs or players.\n" +
