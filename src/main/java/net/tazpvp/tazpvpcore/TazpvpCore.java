@@ -50,6 +50,7 @@ public final class TazpvpCore extends JavaPlugin {
         getCommand("apply").setExecutor(new applyCMD());
         getCommand("appeal").setExecutor(new AppealCMD());
         getCommand("rules").setExecutor(new RulesCMD());
+        getCommand("ad").setExecutor(new AdCMD());
 
 
     }
