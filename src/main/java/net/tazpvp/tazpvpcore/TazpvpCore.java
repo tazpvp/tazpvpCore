@@ -39,7 +39,7 @@ public final class TazpvpCore extends JavaPlugin {
         getCommand("heal").setExecutor(new HealCMD());
         getCommand("invsee").setExecutor(new InvSeeCMD());
         getCommand("playtime").setExecutor(new PlayTimeCMD());
-        getCommand("tp").setExecutor(new TpCMD());
+        getCommand("tp").setExecutor(new TeleportCMD());
         getCommand("clearchat").setExecutor(new ClearChatCMD());
         getCommand("speed").setExecutor(new SpeedCMD());
         getCommand("alert").setExecutor(new AlertCMD());
