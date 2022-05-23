@@ -78,5 +78,11 @@ commands:
     usage: /nick [player] [text]
   help:
     description: "Receive instructions on how to play"
+  apply:
+    description: "Information on how to apply"
+  appeal:
+    description: "information on how to appeal"
+  rules:
+    description: "server rules"
   ad:
     description: "get the advertisement for this server."
