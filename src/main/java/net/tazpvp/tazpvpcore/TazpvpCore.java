@@ -23,7 +23,6 @@ public final class TazpvpCore extends JavaPlugin {
         Bukkit.getLogger().info(" TazpvpCore is enabled!");
 
         registerCommands();
-        registerEvents();
     }
 
     @Override
@@ -52,10 +51,6 @@ public final class TazpvpCore extends JavaPlugin {
         getCommand("rules").setExecutor(new RulesCMD());
         getCommand("ad").setExecutor(new AdCMD());
 
-
-    }
-
-    public void registerEvents(){
 
     }
 
