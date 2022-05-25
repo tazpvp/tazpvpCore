@@ -15,7 +15,7 @@ public class AdCMD implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] args) {
         if (commandSender instanceof Player p) {
-            TextComponent copy = new TextComponent("\n" + ChatColor.YELLOW + "  Click " + ChatColor.GOLD + "" + ChatColor.BOLD + "Here" + ChatColor.YELLOW + " to copy the advertisement for this server.\n");
+            TextComponent copy = new TextComponent("\n" + ChatColor.YELLOW + " Click " + ChatColor.GOLD + "" + ChatColor.BOLD + "Here" + ChatColor.YELLOW + " to copy the advertisement for this server.\n");
             copy.setClickEvent(new ClickEvent(ClickEvent.Action.SUGGEST_COMMAND, ad));
             p.spigot().sendMessage(copy);
         }
