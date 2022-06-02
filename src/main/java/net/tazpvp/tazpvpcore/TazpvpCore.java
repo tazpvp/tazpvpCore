@@ -32,20 +32,9 @@ public final class TazpvpCore extends JavaPlugin implements Listener {
 
     @Override
     public void onDisable() {
-        // Plugin shutdown logic
     }
 
-    @EventHandler
-    public void cmdPreProeces(PlayerCommandPreprocessEvent e){
-        String msg = e.getMessage();
-        if (startswith(msg, "/minecraft:") || startswith(msg, "/pl ") || startswith(msg, "/plugins ")){
-            e.setCancelled(true);
-        }
-    }
 
-    public boolean startswith(String s, String s1) {
-        return s.startsWith(s1);
-    }
 
     public void registerCommands(){
         getCommand("fly").setExecutor(new FlyCMD());
