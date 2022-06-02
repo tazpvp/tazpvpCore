@@ -7,6 +7,9 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import static net.tazpvp.tazpvpcore.Utils.PlayerUtils.fly;
+import static net.tazpvp.tazpvpcore.Utils.PlayerUtils.unfly;
+
 public class FlyCMD implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -31,13 +34,5 @@ public class FlyCMD implements CommandExecutor {
             }
         }
         return true;
-    }
-    public void fly(Player p) {
-        p.setAllowFlight(true);
-        p.sendMessage(ChatColor.DARK_AQUA + "Flight: " + ChatColor.AQUA + "enabled");
-    }
-    public void unfly(Player p) {
-        p.setAllowFlight(false);
-        p.sendMessage(ChatColor.DARK_AQUA + "Flight: " + ChatColor.AQUA + "disabled");
     }
 }

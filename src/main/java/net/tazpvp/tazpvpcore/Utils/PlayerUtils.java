@@ -23,4 +23,13 @@ public class PlayerUtils {
     public static void showPlayer(Player p) {
         p.showPlayer(TazpvpCore.getInstance(), p);
     }
+
+    public static void fly(Player p) {
+        p.setAllowFlight(true);
+        p.sendMessage(ChatColor.DARK_AQUA + "Flight: " + ChatColor.AQUA + "enabled");
+    }
+    public static void unfly(Player p) {
+        p.setAllowFlight(false);
+        p.sendMessage(ChatColor.DARK_AQUA + "Flight: " + ChatColor.AQUA + "disabled");
+    }
 }
