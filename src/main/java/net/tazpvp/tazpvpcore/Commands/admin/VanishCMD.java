@@ -11,6 +11,9 @@ import org.bukkit.entity.Player;
 import java.util.ArrayList;
 import java.util.List;
 
+import static net.tazpvp.tazpvpcore.Utils.PlayerUtils.hidePlayer;
+import static net.tazpvp.tazpvpcore.Utils.PlayerUtils.showPlayer;
+
 public class VanishCMD implements CommandExecutor {
     public final List<Player> Vanished = new ArrayList<>();
 
@@ -26,6 +29,7 @@ public class VanishCMD implements CommandExecutor {
                 Vanished.add(p);
                 p.setGameMode(GameMode.SPECTATOR);
                 p.setInvulnerable(true);
+                hidePlayer(p);
                 Bukkit.broadcastMessage(ChatColor.GRAY + "[" + ChatColor.RED + "-" + ChatColor.GRAY + "] " + p.getName());
                 for (Player staff : Bukkit.getOnlinePlayers()){
                     if (staff.hasPermission("tazpvp.vanish")){
@@ -36,6 +40,7 @@ public class VanishCMD implements CommandExecutor {
                 Vanished.remove(p);
                 p.setGameMode(GameMode.SURVIVAL);
                 p.setInvulnerable(false);
+                showPlayer(p);
                 Bukkit.broadcastMessage(ChatColor.GRAY + "[" + ChatColor.GREEN + "+" + ChatColor.GRAY + "] " + p.getName());
                 for (Player staff : Bukkit.getOnlinePlayers()){
                     if (staff.hasPermission("tazpvp.vanish")){

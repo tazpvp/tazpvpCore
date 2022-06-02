@@ -70,7 +70,9 @@ public class WorldGuard implements Listener {
     }
 
     @EventHandler
-    public void weatherChange(WeatherChangeEvent e) { e.setCancelled(true); }
+    public void weatherChange(WeatherChangeEvent e) {
+        e.setCancelled(true);
+    }
 
     @EventHandler
     public void expDrop(PlayerDeathEvent e) {
@@ -93,10 +95,8 @@ public class WorldGuard implements Listener {
         String w = p.getWorld().getName();
         Material b = e.getClickedBlock().getType();
         if (p.getGameMode() == GameMode.SURVIVAL) {
-            if (w.equals("arena")) {
-                if (e.getAction() == Action.RIGHT_CLICK_BLOCK) {
-                    e.setCancelled(true);
-                }
+            if (e.getAction() == Action.RIGHT_CLICK_BLOCK) {
+                e.setCancelled(true);
             }
         }
     }
