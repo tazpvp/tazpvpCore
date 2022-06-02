@@ -92,8 +92,6 @@ public class WorldGuard implements Listener {
     @EventHandler
     public void blockUse(PlayerInteractEvent e) {
         Player p = e.getPlayer();
-        String w = p.getWorld().getName();
-        Material b = e.getClickedBlock().getType();
         if (p.getGameMode() == GameMode.SURVIVAL) {
             if (e.getAction() == Action.RIGHT_CLICK_BLOCK) {
                 e.setCancelled(true);
