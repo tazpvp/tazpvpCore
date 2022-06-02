@@ -3,7 +3,7 @@ version: '${project.version}'
 main: net.tazpvp.tazpvpcore.TazpvpCore
 api-version: 1.18
 prefix: [ tazpvpCore ]
-authors: [ rownox, Ntdi, BubbleGum ]
+authors: [ rownox, Ntdi ]
 description: Tazpvp's core plugin
 website: tazpvp.net
 commands:
