@@ -4,12 +4,14 @@ import net.tazpvp.tazpvpcore.Commands.admin.*;
 import net.tazpvp.tazpvpcore.Commands.player.*;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
+import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Objects;
 
-public final class TazpvpCore extends JavaPlugin{
+public final class TazpvpCore extends JavaPlugin implements Listener {
 
     public static final HashMap<Player, Boolean> inInvseeGui = new HashMap<>();
 
@@ -31,33 +33,32 @@ public final class TazpvpCore extends JavaPlugin{
     public void onDisable() {
     }
 
-
-
     public void registerCommands(){
-        getCommand("fly").setExecutor(new FlyCMD());
-        getCommand("gmc").setExecutor(new GmcCMD());
-        getCommand("gms").setExecutor(new GmsCMD());
-        getCommand("gma").setExecutor(new GmaCMD());
-        getCommand("gmsp").setExecutor(new GmspCMD());
-        getCommand("heal").setExecutor(new HealCMD());
-        getCommand("invsee").setExecutor(new InvSeeCMD());
-        getCommand("playtime").setExecutor(new PlayTimeCMD());
-        getCommand("tp").setExecutor(new TeleportCMD());
-        getCommand("clearchat").setExecutor(new ClearChatCMD());
-        getCommand("speed").setExecutor(new SpeedCMD());
-        getCommand("alert").setExecutor(new AlertCMD());
-        getCommand("pm").setExecutor(new PrivateMessageCMD());
-        getCommand("clear").setExecutor(new InvClearCMD());
-        getCommand("help").setExecutor(new HelpCMD());
-        getCommand("apply").setExecutor(new ApplyCMD());
-        getCommand("appeal").setExecutor(new AppealCMD());
-        getCommand("rules").setExecutor(new RulesCMD());
-        getCommand("ad").setExecutor(new AdCMD());
-        getCommand("vanish").setExecutor(new VanishCMD());
+        Objects.requireNonNull(getCommand("fly")).setExecutor(new FlyCMD());
+        Objects.requireNonNull(getCommand("gmc")).setExecutor(new GmcCMD());
+        Objects.requireNonNull(getCommand("gms")).setExecutor(new GmsCMD());
+        Objects.requireNonNull(getCommand("gma")).setExecutor(new GmaCMD());
+        Objects.requireNonNull(getCommand("gmsp")).setExecutor(new GmspCMD());
+        Objects.requireNonNull(getCommand("heal")).setExecutor(new HealCMD());
+        Objects.requireNonNull(getCommand("invsee")).setExecutor(new InvSeeCMD());
+        Objects.requireNonNull(getCommand("playtime")).setExecutor(new PlayTimeCMD());
+        Objects.requireNonNull(getCommand("tp")).setExecutor(new TeleportCMD());
+        Objects.requireNonNull(getCommand("clearchat")).setExecutor(new ClearChatCMD());
+        Objects.requireNonNull(getCommand("speed")).setExecutor(new SpeedCMD());
+        Objects.requireNonNull(getCommand("alert")).setExecutor(new AlertCMD());
+        Objects.requireNonNull(getCommand("pm")).setExecutor(new PrivateMessageCMD());
+        Objects.requireNonNull(getCommand("clear")).setExecutor(new InvClearCMD());
+        Objects.requireNonNull(getCommand("help")).setExecutor(new HelpCMD());
+        Objects.requireNonNull(getCommand("apply")).setExecutor(new ApplyCMD());
+        Objects.requireNonNull(getCommand("appeal")).setExecutor(new AppealCMD());
+        Objects.requireNonNull(getCommand("rules")).setExecutor(new RulesCMD());
+        Objects.requireNonNull(getCommand("ad")).setExecutor(new AdCMD());
+        Objects.requireNonNull(getCommand("vanish")).setExecutor(new VanishCMD());
     }
 
     public void registerEvents() {
         getServer().getPluginManager().registerEvents(new WorldGuard(), this);
+        getServer().getPluginManager().registerEvents(this, this);
     }
 
     public static TazpvpCore getInstance(){
