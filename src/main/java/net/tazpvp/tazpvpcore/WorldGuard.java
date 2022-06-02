@@ -94,7 +94,11 @@ public class WorldGuard implements Listener {
         Player p = e.getPlayer();
         if (p.getGameMode() == GameMode.SURVIVAL) {
             if (e.getAction() == Action.RIGHT_CLICK_BLOCK) {
-                e.setCancelled(true);
+                if (e.getClickedBlock().getType() != null) {
+                    if (TazpvpCore.allowedBlocks.contains(e.getClickedBlock().getType())) {
+                        e.setCancelled(true);
+                    }
+                }
             }
         }
     }
