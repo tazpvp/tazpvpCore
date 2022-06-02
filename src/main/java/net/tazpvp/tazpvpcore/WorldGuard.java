@@ -1,5 +1,6 @@
 package net.tazpvp.tazpvpcore;
 
+import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.World;
@@ -13,6 +14,7 @@ import org.bukkit.event.entity.EntitySpawnEvent;
 import org.bukkit.event.entity.FoodLevelChangeEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.PlayerCommandPreprocessEvent;
+import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.weather.WeatherChangeEvent;
 import org.bukkit.metadata.FixedMetadataValue;
 import org.bukkit.metadata.MetadataValue;
@@ -53,7 +55,7 @@ public class WorldGuard implements Listener {
     public void blockPhysics(BlockPhysicsEvent e) {
         if (e.getBlock().getWorld().getName().equals("arena") || e.getBlock().getWorld().getName().equals("duel")) {
             Material m = e.getBlock().getType();
-            if (m == Material.WATER || m == Material.LAVA || m == Material.DIRT || m == Material.GRASS) {
+            if (m == Material.WATER || m == Material.LAVA || m == Material.DIRT || m == Material.GRASS || m == Material.TORCH) {
                 e.setCancelled(true);
             }
         }
@@ -86,15 +88,19 @@ public class WorldGuard implements Listener {
         e.setCancelled(true);
     }
 
+//    @EventHandler
+//    public void feed(FoodLevelChangeEvent e) {
+//        Player p = (Player) e.getEntity();
+//    }
+
     @EventHandler
-    public void feed(FoodLevelChangeEvent e) {
-        Player p = (Player) e.getEntity();
+    public void blockUse(PlayerInteractEvent e) {
+        Player p = e.getPlayer();
         String w = p.getWorld().getName();
-        if (w.equals("spawn")) {
-            if(e.getEntity() instanceof Player) {
-                int oldFoodLevel = p.getFoodLevel();
-                int newFoodLevel = p.getFoodLevel();
-                if(oldFoodLevel > newFoodLevel) {
+        Material b = e.getClickedBlock().getType();
+        if (p.getGameMode() == GameMode.SURVIVAL) {
+            if (w.equals("arena")) {
+                if (e.getAction() == Action.RIGHT_CLICK_BLOCK) {
                     e.setCancelled(true);
                 }
             }
