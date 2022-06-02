@@ -4,15 +4,12 @@ import net.tazpvp.tazpvpcore.Commands.admin.*;
 import net.tazpvp.tazpvpcore.Commands.player.*;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.Listener;
-import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public final class TazpvpCore extends JavaPlugin implements Listener {
+public final class TazpvpCore extends JavaPlugin{
 
     public static final HashMap<Player, Boolean> inInvseeGui = new HashMap<>();
 
@@ -26,8 +23,8 @@ public final class TazpvpCore extends JavaPlugin implements Listener {
         Bukkit.getLogger().info(" TazpvpCore is enabled!");
 
         registerCommands();
+        registerEvents();
 
-        getServer().getPluginManager().registerEvents(this, this);
     }
 
     @Override
