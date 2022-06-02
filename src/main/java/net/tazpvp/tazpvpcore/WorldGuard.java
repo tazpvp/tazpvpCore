@@ -73,7 +73,9 @@ public class WorldGuard implements Listener {
     }
 
     @EventHandler
-    public void leafDecay(LeavesDecayEvent e) { e.setCancelled(true); }
+    public void leafDecay(LeavesDecayEvent e) {
+        e.setCancelled(true);
+    }
 
     @EventHandler
     public void weatherChange(WeatherChangeEvent e) { e.setCancelled(true); }
