@@ -1,4 +1,4 @@
-package net.tazpvp.tazpvpcore.utils;
+package net.tazpvp.tazpvpcore.Utils;
 
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;

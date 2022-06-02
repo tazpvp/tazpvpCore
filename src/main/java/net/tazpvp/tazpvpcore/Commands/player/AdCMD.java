@@ -1,4 +1,4 @@
-package net.tazpvp.tazpvpcore.commands.player;
+package net.tazpvp.tazpvpcore.Commands.player;
 
 import net.md_5.bungee.api.chat.ClickEvent;
 import net.md_5.bungee.api.chat.TextComponent;
@@ -7,8 +7,6 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-
-import java.awt.*;
 
 public class AdCMD implements CommandExecutor {
     final String ad = "/ad Tazpvp &f/ &c1.8 &f/ &cDuels &f/ &cGrind &f/ &cFFA";

@@ -1,7 +1,7 @@
 package net.tazpvp.tazpvpcore;
 
-import net.tazpvp.tazpvpcore.commands.admin.*;
-import net.tazpvp.tazpvpcore.commands.player.*;
+import net.tazpvp.tazpvpcore.Commands.admin.*;
+import net.tazpvp.tazpvpcore.Commands.player.*;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -50,6 +50,10 @@ public final class TazpvpCore extends JavaPlugin {
         getCommand("appeal").setExecutor(new AppealCMD());
         getCommand("rules").setExecutor(new RulesCMD());
         getCommand("ad").setExecutor(new AdCMD());
+    }
+
+    public void registerEvents() {
+        getServer().getPluginManager().registerEvents(new WorldGuard(), this);
     }
 
     public static TazpvpCore getInstance(){

@@ -1,4 +1,4 @@
-package net.tazpvp.tazpvpcore.commands.admin;
+package net.tazpvp.tazpvpcore.Commands.admin;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;

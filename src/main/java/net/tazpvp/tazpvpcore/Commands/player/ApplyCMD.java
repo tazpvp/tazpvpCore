@@ -1,10 +1,6 @@
-package net.tazpvp.tazpvpcore.commands.player;
+package net.tazpvp.tazpvpcore.Commands.player;
 
-import net.md_5.bungee.api.chat.ClickEvent;
-import net.md_5.bungee.api.chat.ComponentBuilder;
-import net.md_5.bungee.api.chat.HoverEvent;
-import net.md_5.bungee.api.chat.TextComponent;
-import net.tazpvp.tazpvpcore.utils.LinkUtils;
+import net.tazpvp.tazpvpcore.Utils.LinkUtils;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

@@ -1,6 +1,6 @@
-package net.tazpvp.tazpvpcore.commands.admin;
+package net.tazpvp.tazpvpcore.Commands.admin;
 
-import net.tazpvp.tazpvpcore.utils.PlayerUtils;
+import net.tazpvp.tazpvpcore.Utils.PlayerUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
 import org.bukkit.command.Command;

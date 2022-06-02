@@ -1,4 +1,4 @@
-package net.tazpvp.tazpvpcore.commands.admin;
+package net.tazpvp.tazpvpcore.Commands.admin;
 
 import net.tazpvp.tazpvpcore.TazpvpCore;
 import org.bukkit.Bukkit;

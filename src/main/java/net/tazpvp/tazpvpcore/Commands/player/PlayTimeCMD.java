@@ -1,6 +1,6 @@
-package net.tazpvp.tazpvpcore.commands.player;
+package net.tazpvp.tazpvpcore.Commands.player;
 
-import net.tazpvp.tazpvpcore.utils.StringUtils;
+import net.tazpvp.tazpvpcore.Utils.StringUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.OfflinePlayer;

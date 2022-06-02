@@ -1,6 +1,6 @@
-package net.tazpvp.tazpvpcore.commands.admin;
+package net.tazpvp.tazpvpcore.Commands.admin;
 
-import net.tazpvp.tazpvpcore.utils.StringUtils;
+import net.tazpvp.tazpvpcore.Utils.StringUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Sound;
