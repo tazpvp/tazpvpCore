@@ -37,6 +37,7 @@ public final class TazpvpCore extends JavaPlugin implements Listener {
         allowedBlocks.add(Material.SPRUCE_TRAPDOOR);
         allowedBlocks.add(Material.LECTERN);
         allowedBlocks.add(Material.CRAFTING_TABLE);
+        allowedBlocks.add(Material.BARREL);
 
 
     }
