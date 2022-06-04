@@ -3,6 +3,7 @@ package net.tazpvp.tazpvpcore;
 import net.tazpvp.tazpvpcore.Commands.admin.*;
 import net.tazpvp.tazpvpcore.Commands.player.*;
 import org.bukkit.Bukkit;
+import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -18,6 +19,7 @@ public final class TazpvpCore extends JavaPlugin implements Listener {
     public static TazpvpCore instance;
 
     public static final ArrayList<Player> newPm = new ArrayList<>();
+    public static ArrayList<Material> allowedBlocks = new ArrayList<>();
 
     @Override
     public void onEnable() {
@@ -26,6 +28,17 @@ public final class TazpvpCore extends JavaPlugin implements Listener {
 
         registerCommands();
         registerEvents();
+
+        allowedBlocks.add(Material.CHEST);
+        allowedBlocks.add(Material.TRAPPED_CHEST);
+        allowedBlocks.add(Material.ENDER_CHEST);
+        allowedBlocks.add(Material.FURNACE);
+        allowedBlocks.add(Material.OAK_TRAPDOOR);
+        allowedBlocks.add(Material.SPRUCE_TRAPDOOR);
+        allowedBlocks.add(Material.LECTERN);
+        allowedBlocks.add(Material.CRAFTING_TABLE);
+        allowedBlocks.add(Material.BARREL);
+
 
     }
 
