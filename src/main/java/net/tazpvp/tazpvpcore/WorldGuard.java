@@ -21,8 +21,10 @@ public class WorldGuard implements Listener {
     public void blockBreak(BlockBreakEvent e) {
         Player p = e.getPlayer();
         Block b = e.getBlock();
-        if(p.getWorld().getName().equals("arena") && p.getGameMode() == GameMode.SURVIVAL) {
-            if (!isPlayerPlaced(b)) { e.setCancelled(true); }
+        if (p.getGameMode() == GameMode.SURVIVAL) {
+            if(p.getWorld().getName().equals("arena") || p.getWorld().getName().equals("ban")) {
+                if (!isPlayerPlaced(b)) { e.setCancelled(true); }
+            }
         }
     }
 
@@ -45,7 +47,7 @@ public class WorldGuard implements Listener {
 
     @EventHandler
     public void blockPhysics(BlockPhysicsEvent e) {
-        if (e.getBlock().getWorld().getName().equals("arena") || e.getBlock().getWorld().getName().equals("duel")) {
+        if (e.getBlock().getWorld().getName().equals("arena") || e.getBlock().getWorld().getName().equals("ban")) {
             Material m = e.getBlock().getType();
             if (m == Material.WATER || m == Material.LAVA || m == Material.DIRT || m == Material.GRASS || m == Material.TORCH) {
                 e.setCancelled(true);
@@ -55,7 +57,7 @@ public class WorldGuard implements Listener {
 
     @EventHandler
     public void blockChange(BlockFromToEvent e) {
-        if (e.getBlock().getWorld().getName().equals("arena") || e.getBlock().getWorld().getName().equals("duel")) {
+        if (e.getBlock().getWorld().getName().equals("arena") || e.getBlock().getWorld().getName().equals("ban")) {
             Block b = e.getBlock();
             Material m = b.getType();
             if (m == Material.WATER || m == Material.LAVA || m == Material.DIRT || m == Material.GRASS) {
