@@ -19,7 +19,7 @@ public final class TazpvpCore extends JavaPlugin implements Listener {
     public static TazpvpCore instance;
 
     public static final ArrayList<Player> newPm = new ArrayList<>();
-    public static ArrayList<Material> allowedBlocks = new ArrayList<>();
+    public static ArrayList<Material> Blocks = new ArrayList<>();
 
     @Override
     public void onEnable() {
@@ -29,16 +29,15 @@ public final class TazpvpCore extends JavaPlugin implements Listener {
         registerCommands();
         registerEvents();
 
-        allowedBlocks.add(Material.ENDER_CHEST);
-        allowedBlocks.add(Material.OAK_PLANKS);
-        allowedBlocks.add(Material.RED_WOOL);
-        allowedBlocks.add(Material.GREEN_WOOL);
-        allowedBlocks.add(Material.YELLOW_WOOL);
-        allowedBlocks.add(Material.DEEPSLATE_GOLD_ORE);
-        allowedBlocks.add(Material.DEEPSLATE_REDSTONE_ORE);
-        allowedBlocks.add(Material.DEEPSLATE_LAPIS_ORE);
-        allowedBlocks.add(Material.DEEPSLATE_EMERALD_ORE);
-        allowedBlocks.add(Material.DEEPSLATE_IRON_ORE);
+        Blocks.add(Material.CHEST);
+        Blocks.add(Material.TRAPPED_CHEST);
+        Blocks.add(Material.FURNACE);
+        Blocks.add(Material.OAK_TRAPDOOR);
+        Blocks.add(Material.SPRUCE_TRAPDOOR);
+        Blocks.add(Material.LECTERN);
+        Blocks.add(Material.CRAFTING_TABLE);
+        Blocks.add(Material.BARREL);
+        Blocks.add(Material.SPRUCE_FENCE_GATE);
 
     }
 
