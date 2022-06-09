@@ -88,3 +88,5 @@ commands:
     description: "get the advertisement for this server."
   vanish:
     description: "vanish"
+  discord:
+    description: "get the discord link"
