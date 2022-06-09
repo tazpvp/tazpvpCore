@@ -30,6 +30,15 @@ public final class TazpvpCore extends JavaPlugin implements Listener {
         registerEvents();
 
         allowedBlocks.add(Material.ENDER_CHEST);
+        allowedBlocks.add(Material.OAK_PLANKS);
+        allowedBlocks.add(Material.RED_WOOL);
+        allowedBlocks.add(Material.GREEN_WOOL);
+        allowedBlocks.add(Material.YELLOW_WOOL);
+        allowedBlocks.add(Material.DEEPSLATE_GOLD_ORE);
+        allowedBlocks.add(Material.DEEPSLATE_REDSTONE_ORE);
+        allowedBlocks.add(Material.DEEPSLATE_LAPIS_ORE);
+        allowedBlocks.add(Material.DEEPSLATE_EMERALD_ORE);
+        allowedBlocks.add(Material.DEEPSLATE_IRON_ORE);
 
     }
 
