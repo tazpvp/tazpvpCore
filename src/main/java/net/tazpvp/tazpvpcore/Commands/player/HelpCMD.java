@@ -12,17 +12,17 @@ public class HelpCMD implements CommandExecutor {
             ChatColor.AQUA + " Shards: " + ChatColor.GRAY + "Levels, Heads, Generator\n" +
             ChatColor.YELLOW + " Coins: " + ChatColor.GRAY + "Kills, Achievements, Streaks, Ores\n" +
             ChatColor.LIGHT_PURPLE + " EXP: " + ChatColor.GRAY + "Kills, Achievements\n" +
-            ChatColor.RED + " Extra HP: " + ChatColor.GRAY + "Rebirth, Perks\n" +
+            ChatColor.RED + " Perks/Rebirth: " + ChatColor.GRAY + "Speak with 'Rigel' in The Depths\n" +
             " \n" +
-            ChatColor.GREEN + " [1/2]" + ChatColor.DARK_GREEN + " type '/help 2' for the next page.";
+            ChatColor.GREEN + " [1/3]" + ChatColor.DARK_GREEN + " type '/help 2' for the next page.";
     String s2 = " \n" +
             ChatColor.GRAY + "" + ChatColor.BOLD + " HOW TO GET (Items):\n" +
-            ChatColor.RED + " Lorenzo: " + ChatColor.GRAY + "Main Center\n" +
-            ChatColor.YELLOW + " Maxim: " + ChatColor.GRAY + "Item Shop\n" +
-            ChatColor.LIGHT_PURPLE + " Rigel: " + ChatColor.GRAY + "Kills, Achievements\n" +
-            ChatColor.RED + " Extra HP: " + ChatColor.GRAY + "Rebirth, Perks\n" +
+            ChatColor.AQUA + " Swords: " + ChatColor.GRAY + "Spin the Wheel o Blades at spawn\n" +
+            ChatColor.YELLOW + " Food/Tools: " + ChatColor.GRAY + "Interact with 'Maxim' at spawn\n" +
+            ChatColor.LIGHT_PURPLE + " Armor/Bow Upgrades: " + ChatColor.GRAY + "Interact with 'Frank' at the tower\n" +
+            ChatColor.RED + " Pickaxe Upgrades: " + ChatColor.GRAY + "Interact with 'Caesar' at the mine\n" +
             " \n" +
-            ChatColor.GREEN + " [1/2]" + ChatColor.DARK_GREEN + " type '/help 3' for the next page.";
+            ChatColor.GREEN + " [2/3]" + ChatColor.DARK_GREEN + " type '/help 3' for the next page.";
     String s3 = " \n" +
             ChatColor.WHITE + "/report " + ChatColor.GRAY + "Report rule breakers.\n" +
             ChatColor.WHITE + "/apply " + ChatColor.GRAY + "Apply for a staff position.\n" +
@@ -31,7 +31,7 @@ public class HelpCMD implements CommandExecutor {
             ChatColor.WHITE + "/duel " + ChatColor.GRAY + "Battle versus another player.\n" +
             ChatColor.WHITE + "/ad " + ChatColor.GRAY + "Receive the server advertisement to copy.\n" +
             " \n" +
-            ChatColor.GREEN + " [1/2]" + ChatColor.DARK_GREEN + " type '/help' for the next page.";
+            ChatColor.GREEN + " [3/3]" + ChatColor.DARK_GREEN + " type '/help' for the next page.";
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] args) {
         if (commandSender instanceof Player p) {
