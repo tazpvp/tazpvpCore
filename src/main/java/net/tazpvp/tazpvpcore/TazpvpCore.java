@@ -10,6 +10,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Objects;
 
 public final class TazpvpCore extends JavaPlugin implements Listener {
@@ -20,6 +21,9 @@ public final class TazpvpCore extends JavaPlugin implements Listener {
 
     public static final ArrayList<Player> newPm = new ArrayList<>();
     public static ArrayList<Material> Blocks = new ArrayList<>();
+
+    public static List<Player> Vanished = new ArrayList<>();
+
 
     @Override
     public void onEnable() {

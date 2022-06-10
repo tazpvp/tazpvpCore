@@ -1,5 +1,6 @@
 package net.tazpvp.tazpvpcore.Commands.admin;
 
+import net.tazpvp.tazpvpcore.TazpvpCore;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
@@ -15,8 +16,6 @@ import static net.tazpvp.tazpvpcore.Utils.PlayerUtils.hidePlayer;
 import static net.tazpvp.tazpvpcore.Utils.PlayerUtils.showPlayer;
 
 public class VanishCMD implements CommandExecutor {
-    public final List<Player> Vanished = new ArrayList<>();
-
     @Override
     public boolean onCommand(final CommandSender commandSender, final Command command, final String s, final String[] strings) {
         if (strings.length > 1) {
@@ -39,11 +38,11 @@ public class VanishCMD implements CommandExecutor {
     }
 
     private void doChecks(final Player target) {
-        if (Vanished.contains(target)) {
-            Vanished.remove(target);
+        if (TazpvpCore.Vanished.contains(target)) {
+            TazpvpCore.Vanished.remove(target);
             vanish(target, GameMode.SURVIVAL, false, false);
         } else {
-            Vanished.add(target);
+            TazpvpCore.Vanished.add(target);
             vanish(target, GameMode.SPECTATOR, true, true);
         }
     }
