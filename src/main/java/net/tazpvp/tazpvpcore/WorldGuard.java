@@ -104,13 +104,19 @@ public class WorldGuard implements Listener {
 
     @EventHandler
     public void armorMove(InventoryClickEvent e) {
-        if (e.getSlotType() == InventoryType.SlotType.ARMOR) {
-            e.setCancelled(true);
+        Player p = (Player) e.getWhoClicked();
+        if (p.getGameMode() == GameMode.SURVIVAL) {
+            if (e.getSlotType() == InventoryType.SlotType.ARMOR) {
+                e.setCancelled(true);
+            }
         }
     }
 
     @EventHandler
     public void itemDrop(PlayerDropItemEvent e) {
-        e.setCancelled(true);
+        Player p = e.getPlayer();
+        if (p.getGameMode() == GameMode.SURVIVAL) {
+            e.setCancelled(true);
+        }
     }
 }
