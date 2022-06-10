@@ -13,7 +13,7 @@ public class DiscordCMD implements CommandExecutor {
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
         if (commandSender instanceof Player p) {
             p.sendMessage("");
-            p.spigot().sendMessage(LinkUtils.discordInvite(ChatColor.YELLOW + "[Click Here] to join the discord!"));
+            p.spigot().sendMessage(LinkUtils.discordInvite(ChatColor.AQUA + "[Click Here] " + ChatColor.DARK_AQUA + "to join the discord"));
             p.sendMessage("");
         }
         return false;

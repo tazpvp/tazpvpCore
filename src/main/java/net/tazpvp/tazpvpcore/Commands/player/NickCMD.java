@@ -23,7 +23,7 @@ public class NickCMD implements CommandExecutor {
                 p.sendMessage(ChatColor.RED + "You must purchase a rank to receive this permission.");
             }
         }
-        return true;
+        return false;
     }
 
     public void nick(Player p, String nick) {
