@@ -8,16 +8,11 @@ import org.bukkit.entity.Player;
 
 public class HelpCMD implements CommandExecutor {
     String s1 = "" +
-            ChatColor.YELLOW + "Gain EXP from daily rewards, dealing damage,\n" +
-            ChatColor.YELLOW + "achievements, and killing mobs or players.\n" +
-            ChatColor.YELLOW + "\n" +
-            ChatColor.GOLD + "Gain money from killing, achievements, streaks,\n" +
-            ChatColor.GOLD + "mining, and daily rewards to use at the shop\n" +
-            ChatColor.YELLOW + "\n" +
-            ChatColor.RED + "Get up to five extra hearts from streaks,\n" +
-            ChatColor.RED + "rebirth, or getting the \"fat\" perk.\n" +
-            ChatColor.YELLOW + "\n" +
-            ChatColor.DARK_AQUA + "All inventory items are lost on death.\n" +
+            ChatColor.GRAY + "" + ChatColor.BOLD + "HOW TO GET:\n" +
+            ChatColor.DARK_AQUA + "Shards: Levels, Heads, Generator" +
+            ChatColor.GOLD + "Coins: Kills, Achievements, Streaks, Ores\n" +
+            ChatColor.YELLOW + "EXP: Kills, Achievements,\n" +
+            ChatColor.RED + "Extra Hearts: Rebirth, Fat Perk,\n" +
             "" +
             ChatColor.GREEN + "[1/2]" + ChatColor.GRAY + " type '/help 2' for the next page.";
     @Override
@@ -25,7 +20,7 @@ public class HelpCMD implements CommandExecutor {
         if (commandSender instanceof Player p) {
             if (args.length < 1) {
                 help(p, 1);
-            } else if (args.length == 2 && args[1].equals("2")) {
+            } else if (args.length == 1 && args[0].equals("2")) {
                 help(p, 2);}
         }
         return false;

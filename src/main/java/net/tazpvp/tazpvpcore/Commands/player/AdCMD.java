@@ -9,7 +9,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public class AdCMD implements CommandExecutor {
-    final String ad = "/ad Tazpvp &f/ &c1.8 &f/ &cDuels &f/ &cGrind &f/ &cFFA";
+    final String ad = "/ad Tazpvp &bRPG &f/ &3PVP &f/ &bFFA";
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] args) {
         if (commandSender instanceof Player p) {
