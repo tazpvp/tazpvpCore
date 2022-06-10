@@ -8,28 +8,32 @@ import org.bukkit.entity.Player;
 
 public class HelpCMD implements CommandExecutor {
     String s1 = " \n" +
-            ChatColor.GRAY + "" + ChatColor.BOLD + " HOW TO GET (Stats):\n" +
-            ChatColor.AQUA + " Shards: " + ChatColor.GRAY + "Levels, Heads, Generator\n" +
-            ChatColor.YELLOW + " Coins: " + ChatColor.GRAY + "Kills, Achievements, Streaks, Ores\n" +
-            ChatColor.LIGHT_PURPLE + " EXP: " + ChatColor.GRAY + "Kills, Achievements\n" +
-            ChatColor.RED + " Perks/Rebirth: " + ChatColor.GRAY + "Speak with 'Rigel' in The Depths\n" +
+            ChatColor.RED + " How to get Stats:\n" +
+            " \n" +
+            ChatColor.AQUA + " Shards: " + ChatColor.DARK_AQUA + "Levels, Heads, Generator\n" +
+            ChatColor.AQUA + " Coins: " + ChatColor.DARK_AQUA + "Kills, Achievements, Streaks, Ores\n" +
+            ChatColor.AQUA + " EXP: " + ChatColor.DARK_AQUA + "Kills, Achievements\n" +
+            ChatColor.AQUA + " Perks/Rebirth: " + ChatColor.DARK_AQUA + "Speak with 'Rigel' in The Depths\n" +
             " \n" +
             ChatColor.GREEN + " [1/3]" + ChatColor.DARK_GREEN + " type '/help 2' for the next page.";
     String s2 = " \n" +
-            ChatColor.GRAY + "" + ChatColor.BOLD + " HOW TO GET (Items):\n" +
-            ChatColor.AQUA + " Swords: " + ChatColor.GRAY + "Spin the Wheel o Blades at spawn\n" +
-            ChatColor.YELLOW + " Food/Tools: " + ChatColor.GRAY + "Interact with 'Maxim' at spawn\n" +
-            ChatColor.LIGHT_PURPLE + " Armor/Bow Upgrades: " + ChatColor.GRAY + "Interact with 'Frank' at the tower\n" +
-            ChatColor.RED + " Pickaxe Upgrades: " + ChatColor.GRAY + "Interact with 'Caesar' at the mine\n" +
+            ChatColor.RED + " How to get Items:\n" +
+            " \n" +
+            ChatColor.AQUA + " Swords: " + ChatColor.DARK_AQUA + "Spin the Wheel o Blades at spawn\n" +
+            ChatColor.AQUA + " Food/Tools: " + ChatColor.DARK_AQUA + "Interact with 'Maxim' at spawn\n" +
+            ChatColor.AQUA + " Armor/Bow Upgrades: " + ChatColor.DARK_AQUA + "Interact with 'Frank' at the tower\n" +
+            ChatColor.AQUA + " Pickaxe Upgrades: " + ChatColor.DARK_AQUA + "Interact with 'Caesar' at the mine\n" +
             " \n" +
             ChatColor.GREEN + " [2/3]" + ChatColor.DARK_GREEN + " type '/help 3' for the next page.";
     String s3 = " \n" +
-            ChatColor.WHITE + "/report " + ChatColor.GRAY + "Report rule breakers.\n" +
-            ChatColor.WHITE + "/apply " + ChatColor.GRAY + "Apply for a staff position.\n" +
-            ChatColor.WHITE + "/spawn " + ChatColor.GRAY + "Teleport back to the spawn.\n" +
-            ChatColor.WHITE + "/discord " + ChatColor.GRAY + "Join the community.\n" +
-            ChatColor.WHITE + "/duel " + ChatColor.GRAY + "Battle versus another player.\n" +
-            ChatColor.WHITE + "/ad " + ChatColor.GRAY + "Receive the server advertisement to copy.\n" +
+            ChatColor.RED + " Helpful Commands:\n" +
+            " \n" +
+            ChatColor.WHITE + " /report " + ChatColor.GRAY + "Report rule breakers.\n" +
+            ChatColor.WHITE + " /apply " + ChatColor.GRAY + "Apply for a staff position.\n" +
+            ChatColor.WHITE + " /spawn " + ChatColor.GRAY + "Teleport back to the spawn.\n" +
+            ChatColor.WHITE + " /discord " + ChatColor.GRAY + "Join the community.\n" +
+            ChatColor.WHITE + " /duel " + ChatColor.GRAY + "Battle versus another player.\n" +
+            ChatColor.WHITE + " /ad " + ChatColor.GRAY + "Receive the server advertisement to copy.\n" +
             " \n" +
             ChatColor.GREEN + " [3/3]" + ChatColor.DARK_GREEN + " type '/help' for the next page.";
     @Override
