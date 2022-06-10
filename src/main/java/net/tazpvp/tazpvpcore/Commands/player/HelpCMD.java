@@ -19,6 +19,7 @@ public class HelpCMD implements CommandExecutor {
     String s2 = " \n" +
             ChatColor.RED + " How to get Items:\n" +
             " \n" +
+            ChatColor.YELLOW + " Shards: " + ChatColor.GOLD + "Trade player heads to 'Bub' in the sewers\n" +
             ChatColor.YELLOW + " Swords: " + ChatColor.GOLD + "Spin the Wheel o Blades at spawn\n" +
             ChatColor.YELLOW + " Food/Tools: " + ChatColor.GOLD + "Interact with 'Maxim' at spawn\n" +
             ChatColor.YELLOW + " Armor/Bow Upgrades: " + ChatColor.GOLD + "Interact with 'Frank' at the tower\n" +
