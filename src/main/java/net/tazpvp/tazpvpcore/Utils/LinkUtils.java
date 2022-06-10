@@ -14,4 +14,11 @@ public class LinkUtils {
 
         return msg;
     }
+    public static TextComponent storeLink(String name) {
+        TextComponent msg = new TextComponent(ChatColor.BOLD + "" + ChatColor.YELLOW + name);
+        msg.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ComponentBuilder("§fServer Store").create()));
+        msg.setClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, "https://taznet.tebex.io/category/credits"));
+
+        return msg;
+    }
 }

@@ -90,3 +90,7 @@ commands:
     description: "vanish"
   discord:
     description: "get the discord link"
+  store:
+    aliases:
+      - buy
+    description: "get the store link"

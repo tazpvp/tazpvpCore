@@ -74,6 +74,7 @@ public final class TazpvpCore extends JavaPlugin implements Listener {
         Objects.requireNonNull(getCommand("ad")).setExecutor(new AdCMD());
         Objects.requireNonNull(getCommand("vanish")).setExecutor(new VanishCMD());
         Objects.requireNonNull(getCommand("discord")).setExecutor(new DiscordCMD());
+        Objects.requireNonNull(getCommand("store")).setExecutor(new StoreCMD());
     }
 
     public void registerEvents() {
