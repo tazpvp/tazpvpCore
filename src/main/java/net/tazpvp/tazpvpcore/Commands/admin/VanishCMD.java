@@ -18,37 +18,51 @@ public class VanishCMD implements CommandExecutor {
     public final List<Player> Vanished = new ArrayList<>();
 
     @Override
-    public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
-        if (commandSender instanceof Player p) {
-            String w = p.getWorld().getName();
-            if (!p.hasPermission("tazpvp.vanish")) {
-                p.sendMessage(ChatColor.RED + "You do not have permission to vanish.");
-            } else if (!w.equalsIgnoreCase("arena")) {
-                p.sendMessage(ChatColor.RED + "You must be at spawn to vanish.");
-            } else if (!Vanished.contains(p)){
-                Vanished.add(p);
-                p.setGameMode(GameMode.SPECTATOR);
-                p.setInvulnerable(true);
-                hidePlayer(p);
-                Bukkit.broadcastMessage(ChatColor.GRAY + "[" + ChatColor.RED + "-" + ChatColor.GRAY + "] " + p.getName());
-                for (Player staff : Bukkit.getOnlinePlayers()){
-                    if (staff.hasPermission("tazpvp.vanish")){
-                        staff.sendMessage(ChatColor.GREEN + p.getName() + " is now vanished.");
-                    }
+    public boolean onCommand(final CommandSender commandSender, final Command command, final String s, final String[] strings) {
+        if (strings.length > 1) {
+            if (commandSender.hasPermission("tazpvp.vanishOthers")) {
+                Player target = Bukkit.getPlayer(strings[1]);
+                if (target == null) {
+                    commandSender.sendMessage(ChatColor.RED + "Player not found.");
+                    return true;
                 }
-            } else {
-                Vanished.remove(p);
-                p.setGameMode(GameMode.SURVIVAL);
-                p.setInvulnerable(false);
-                showPlayer(p);
-                Bukkit.broadcastMessage(ChatColor.GRAY + "[" + ChatColor.GREEN + "+" + ChatColor.GRAY + "] " + p.getName());
-                for (Player staff : Bukkit.getOnlinePlayers()){
-                    if (staff.hasPermission("tazpvp.vanish")){
-                        staff.sendMessage(ChatColor.GREEN + p.getName() + " is no longer vanished.");
-                    }
+                doChecks(target);
+            }
+        } else {
+            if (commandSender instanceof Player p) {
+                if (p.hasPermission("tazpvp.vanish")) {
+                    doChecks(p);
                 }
             }
         }
         return false;
+    }
+
+    private void doChecks(final Player target) {
+        if (Vanished.contains(target)) {
+            Vanished.remove(target);
+            vanish(target, GameMode.SURVIVAL, false, false);
+        } else {
+            Vanished.add(target);
+            vanish(target, GameMode.SPECTATOR, true, true);
+        }
+    }
+
+    private void vanish(final Player p, final GameMode gamemode, final boolean invulnerable, final boolean hidden){
+        p.setGameMode(gamemode);
+        p.setInvulnerable(invulnerable);
+        String joinleavemsg;
+        String staffmsg;
+        if (hidden){
+            hidePlayer(p);
+            joinleavemsg = ChatColor.GRAY + "[" + ChatColor.RED + "-" + ChatColor.GRAY + "] " + p.getName();
+            staffmsg = ChatColor.GREEN + p.getName() + " is now vanished.";
+        } else {
+            showPlayer(p);
+            joinleavemsg = ChatColor.GRAY + "[" + ChatColor.GREEN + "+" + ChatColor.GRAY + "] " + p.getName();
+            staffmsg = ChatColor.GREEN + p.getName() + " is no longer vanished.";
+        }
+        Bukkit.broadcast(staffmsg, "tazpvp.vanish");
+        Bukkit.broadcastMessage(joinleavemsg);
     }
 }
