@@ -36,10 +36,13 @@ public class PrivateMessageCMD implements CommandExecutor, Listener{
                     String msg = StringUtils.buildString(args, 1);
                     target.sendMessage( ChatColor.DARK_AQUA + "From " + ChatColor.AQUA + p.getName() + ": "  + ChatColor.WHITE + msg);
                     p.sendMessage(ChatColor.DARK_AQUA + "To " + ChatColor.AQUA + (args[0]) + ": " + ChatColor.WHITE + msg);
-                    target.playSound(target.getLocation(), Sound.ENTITY_SHEEP_SHEAR, 1, 1);
+                    target.playSound(target.getLocation(), Sound.BLOCK_NOTE_BLOCK_CHIME, 1, 1);
                     if (!TazpvpCore.newPm.contains(p)) {
-                        target.sendMessage(ChatColor.AQUA + " To respond to this private message, type " + ChatColor.GRAY + "/PM <player> <message>");
                         TazpvpCore.newPm.add(p);
+                    }
+                    if (!TazpvpCore.newPm.contains(target)) {
+                        target.sendMessage(ChatColor.AQUA + " To respond to this private message, type " + ChatColor.GRAY + "/PM <player> <message>");
+                        TazpvpCore.newPm.add(target);
                     }
                 }
             } else {
