@@ -16,12 +16,12 @@ public class PlayTimeCMD implements CommandExecutor {
         if(sender instanceof Player p) {
             if (args.length == 0) {
                 int seconds = p.getStatistic(Statistic.PLAY_ONE_MINUTE) / 20;
-                p.sendMessage(ChatColor.GREEN + "Playtime: " + ChatColor.YELLOW + StringUtils.secondsToDDHHMMSS(seconds));
+                p.sendMessage(ChatColor.DARK_AQUA + "Playtime: " + ChatColor.AQUA + StringUtils.secondsToDDHHMMSS(seconds));
             } else {
                 OfflinePlayer target = Bukkit.getPlayer(args[0]);
                 if (target.isOnline()) {
                     int seconds = target.getPlayer().getStatistic(Statistic.PLAY_ONE_MINUTE) / 20;
-                    p.sendMessage(ChatColor.GREEN + target.getName() + "'s playtime: " + ChatColor.YELLOW + StringUtils.secondsToDDHHMMSS(seconds));
+                    p.sendMessage(ChatColor.DARK_AQUA + target.getName() + "'s playtime: " + ChatColor.AQUA + StringUtils.secondsToDDHHMMSS(seconds));
                 }
             }
         } else {
