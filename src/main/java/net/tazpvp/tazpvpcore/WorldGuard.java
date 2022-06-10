@@ -8,6 +8,8 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.*;
 import org.bukkit.event.entity.PlayerDeathEvent;
+import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.weather.WeatherChangeEvent;
@@ -98,6 +100,13 @@ public class WorldGuard implements Listener {
                     }
                 }
             }
+        }
+    }
+
+    @EventHandler
+    public void armorMove(InventoryClickEvent e) {
+        if (e.getSlotType() == InventoryType.SlotType.ARMOR) {
+            e.setCancelled(true);
         }
     }
 }
