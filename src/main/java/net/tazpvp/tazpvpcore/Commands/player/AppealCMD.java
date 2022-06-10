@@ -12,9 +12,8 @@ public class AppealCMD implements CommandExecutor {
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] args) {
         if (commandSender instanceof Player p) {
             p.sendMessage(ChatColor.DARK_GRAY + "");
-            p.sendMessage(ChatColor.AQUA + " If you want to be unmuted or unbanned, follow the steps below.");
-            p.sendMessage(ChatColor.DARK_AQUA + " Contact support: Click below and go to the " + ChatColor.WHITE + "#support " + ChatColor.DARK_AQUA + "channel in our discord.");
-            p.spigot().sendMessage(LinkUtils.discordInvite("[Click Here] " + ChatColor.DARK_AQUA + "to appeal."));
+            p.sendMessage(ChatColor.GRAY + " If you wish to be unmuted or unbanned:");
+            p.spigot().sendMessage(LinkUtils.discordInvite(ChatColor.DARK_AQUA + " Contact support: Click below and go to the " + ChatColor.WHITE + "#support " + ChatColor.DARK_AQUA + "channel in our " + ChatColor.AQUA + " [Discord]"));
             p.sendMessage(ChatColor.DARK_GRAY + "");
         }
         return false;
