@@ -7,14 +7,14 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public class HelpCMD implements CommandExecutor {
-    String s1 = "" +
-            ChatColor.GRAY + "" + ChatColor.BOLD + "HOW TO GET:\n" +
-            ChatColor.DARK_AQUA + "Shards: Levels, Heads, Generator" +
-            ChatColor.GOLD + "Coins: Kills, Achievements, Streaks, Ores\n" +
-            ChatColor.YELLOW + "EXP: Kills, Achievements,\n" +
-            ChatColor.RED + "Extra Hearts: Rebirth, Fat Perk,\n" +
-            "" +
-            ChatColor.GREEN + "[1/2]" + ChatColor.GRAY + " type '/help 2' for the next page.";
+    String s1 = " " +
+            ChatColor.GRAY + "" + ChatColor.BOLD + " HOW TO GET:\n" +
+            ChatColor.AQUA + " Shards: " + ChatColor.DARK_AQUA + "Levels, Heads, Generator\n" +
+            ChatColor.YELLOW + " Coins: " + ChatColor.GOLD + "Kills, Achievements, Streaks, Ores\n" +
+            ChatColor.LIGHT_PURPLE + " EXP: " + ChatColor.DARK_PURPLE + "Kills, Achievements,\n" +
+            ChatColor.RED + " Extra HP: " + ChatColor.DARK_RED + "Rebirth, Fat Perk,\n" +
+            " " +
+            ChatColor.GREEN + " [1/2]" + ChatColor.GRAY + " type '/help 2' for the next page.";
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] args) {
         if (commandSender instanceof Player p) {
