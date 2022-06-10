@@ -17,10 +17,10 @@ import static net.tazpvp.tazpvpcore.Utils.PlayerUtils.showPlayer;
 
 public class VanishCMD implements CommandExecutor {
     @Override
-    public boolean onCommand(final CommandSender commandSender, final Command command, final String s, final String[] strings) {
-        if (strings.length > 1) {
+    public boolean onCommand( CommandSender commandSender,  Command command, String s, String[] strings) {
+        if (strings.length > 0) {
             if (commandSender.hasPermission("tazpvp.vanishOthers")) {
-                Player target = Bukkit.getPlayer(strings[1]);
+                Player target = Bukkit.getPlayer(strings[0]);
                 if (target == null) {
                     commandSender.sendMessage(ChatColor.RED + "Player not found.");
                     return true;
@@ -34,7 +34,7 @@ public class VanishCMD implements CommandExecutor {
                 }
             }
         }
-        return false;
+        return true;
     }
 
     private void doChecks(final Player target) {
