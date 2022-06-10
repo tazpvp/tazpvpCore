@@ -11,6 +11,7 @@ import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.event.player.PlayerCommandPreprocessEvent;
+import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.weather.WeatherChangeEvent;
 import org.bukkit.metadata.FixedMetadataValue;
@@ -108,5 +109,10 @@ public class WorldGuard implements Listener {
         if (e.getSlotType() == InventoryType.SlotType.ARMOR) {
             e.setCancelled(true);
         }
+    }
+
+    @EventHandler
+    public void itemDrop(PlayerDropItemEvent e) {
+        e.setCancelled(true);
     }
 }
