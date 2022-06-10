@@ -19,10 +19,10 @@ public class HelpCMD implements CommandExecutor {
     String s2 = " \n" +
             ChatColor.RED + " How to get Items:\n" +
             " \n" +
-            ChatColor.AQUA + " Swords: " + ChatColor.DARK_AQUA + "Spin the Wheel o Blades at spawn\n" +
-            ChatColor.AQUA + " Food/Tools: " + ChatColor.DARK_AQUA + "Interact with 'Maxim' at spawn\n" +
-            ChatColor.AQUA + " Armor/Bow Upgrades: " + ChatColor.DARK_AQUA + "Interact with 'Frank' at the tower\n" +
-            ChatColor.AQUA + " Pickaxe Upgrades: " + ChatColor.DARK_AQUA + "Interact with 'Caesar' at the mine\n" +
+            ChatColor.YELLOW + " Swords: " + ChatColor.GOLD + "Spin the Wheel o Blades at spawn\n" +
+            ChatColor.YELLOW + " Food/Tools: " + ChatColor.GOLD + "Interact with 'Maxim' at spawn\n" +
+            ChatColor.YELLOW + " Armor/Bow Upgrades: " + ChatColor.GOLD + "Interact with 'Frank' at the tower\n" +
+            ChatColor.YELLOW + " Pickaxe Upgrades: " + ChatColor.GOLD + "Interact with 'Caesar' at the mine\n" +
             " \n" +
             ChatColor.GREEN + " [2/3]" + ChatColor.DARK_GREEN + " type '/help 3' for the next page.";
     String s3 = " \n" +
