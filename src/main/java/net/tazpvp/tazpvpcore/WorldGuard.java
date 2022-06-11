@@ -118,7 +118,7 @@ public class WorldGuard implements Listener {
         Player p = e.getPlayer();
         Material m = e.getItemDrop().getItemStack().getType();
         if (p.getGameMode() == GameMode.SURVIVAL) {
-            if (m == Material.DIAMOND_SWORD) {
+            if (TazpvpCore.keepItems.contains(m)) {
                 e.setCancelled(true);
             }
         }

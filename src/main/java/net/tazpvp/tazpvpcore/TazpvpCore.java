@@ -23,6 +23,7 @@ public final class TazpvpCore extends JavaPlugin implements Listener {
     public static ArrayList<Material> Blocks = new ArrayList<>();
 
     public static List<Player> Vanished = new ArrayList<>();
+    public static List<Material> keepItems = new ArrayList<>();
 
 
     @Override
@@ -48,6 +49,24 @@ public final class TazpvpCore extends JavaPlugin implements Listener {
         Blocks.add(Material.FLOWER_POT);
         Blocks.add(Material.SPRUCE_DOOR);
         Blocks.add(Material.DARK_OAK_DOOR);
+        
+        keepItems.add(Material.WOODEN_SWORD);
+        keepItems.add(Material.STONE_SWORD);
+        keepItems.add(Material.IRON_SWORD);
+        keepItems.add(Material.DIAMOND_SWORD);
+        keepItems.add(Material.GOLDEN_SWORD);
+        keepItems.add(Material.BOW);
+        keepItems.add(Material.WOODEN_PICKAXE);
+        keepItems.add(Material.STONE_PICKAXE);
+        keepItems.add(Material.IRON_PICKAXE);
+        keepItems.add(Material.GOLDEN_PICKAXE);
+        keepItems.add(Material.DIAMOND_PICKAXE);
+        keepItems.add(Material.DIAMOND_HELMET);
+        keepItems.add(Material.DIAMOND_CHESTPLATE);
+        keepItems.add(Material.DIAMOND_LEGGINGS);
+        keepItems.add(Material.DIAMOND_BOOTS);
+        
+        
 
 
     }
