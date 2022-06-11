@@ -14,6 +14,7 @@ import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.weather.WeatherChangeEvent;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.metadata.FixedMetadataValue;
 
 import static net.tazpvp.tazpvpcore.Utils.BlockUtils.isPlayerPlaced;
@@ -115,7 +116,17 @@ public class WorldGuard implements Listener {
     @EventHandler
     public void itemDrop(PlayerDropItemEvent e) {
         Player p = e.getPlayer();
+        Material m = e.getItemDrop().getItemStack().getType();
         if (p.getGameMode() == GameMode.SURVIVAL) {
+            if (m == Material.DIAMOND_SWORD) {
+                e.setCancelled(true);
+            }
+        }
+    }
+
+    @EventHandler
+    public void itemCraft(org.bukkit.event.inventory.CraftItemEvent e) {
+        if (!e.getWhoClicked().isOp()) {
             e.setCancelled(true);
         }
     }
