@@ -19,6 +19,7 @@
     <url>tazpvp.net</url>
 
     <build>
+        <finalName>TazpvpCore</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
