@@ -51,19 +51,12 @@ public class WorldGuard implements Listener {
 
     @EventHandler
     public void blockPhysics(BlockPhysicsEvent e) {
-        Material m = e.getBlock().getType();
-        if (m == Material.WATER || m == Material.LAVA || m == Material.DIRT || m == Material.GRASS || m == Material.TORCH) {
-            e.setCancelled(true);
-        }
+        e.setCancelled(true);
     }
 
     @EventHandler
     public void blockChange(BlockFromToEvent e) {
-        Block b = e.getBlock();
-        Material m = b.getType();
-        if (m == Material.WATER || m == Material.LAVA || m == Material.DIRT || m == Material.GRASS) {
-            e.setCancelled(true);
-        }
+        e.setCancelled(true);
     }
 
     @EventHandler
