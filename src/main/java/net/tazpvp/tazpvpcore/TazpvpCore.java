@@ -14,16 +14,13 @@ import java.util.List;
 import java.util.Objects;
 
 public final class TazpvpCore extends JavaPlugin implements Listener {
-
     public static final HashMap<Player, Boolean> inInvseeGui = new HashMap<>();
-
     public static TazpvpCore instance;
-
     public static final ArrayList<Player> newPm = new ArrayList<>();
     public static ArrayList<Material> Blocks = new ArrayList<>();
-
     public static List<Player> Vanished = new ArrayList<>();
     public static List<Material> keepItems = new ArrayList<>();
+    public static HashMap<Player, Player> messages = new HashMap<>();
 
 
     @Override
@@ -55,6 +52,7 @@ public final class TazpvpCore extends JavaPlugin implements Listener {
         keepItems.add(Material.IRON_SWORD);
         keepItems.add(Material.DIAMOND_SWORD);
         keepItems.add(Material.GOLDEN_SWORD);
+        keepItems.add(Material.NETHERITE_SWORD);
         keepItems.add(Material.BOW);
         keepItems.add(Material.WOODEN_PICKAXE);
         keepItems.add(Material.STONE_PICKAXE);
