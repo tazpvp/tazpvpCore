@@ -24,7 +24,6 @@ public class PrivateMessageCMD implements CommandExecutor, Listener{
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof Player p) {
-
             if (args.length >= 2) {
                 Player target = p.getServer().getPlayer(args[0]);
                 if (target == null) { p.sendMessage(ChatColor.RED + "This player does not exist."); return true; }
@@ -37,7 +36,7 @@ public class PrivateMessageCMD implements CommandExecutor, Listener{
                 if (!TazpvpCore.messages.containsKey(p)) {
                     p.sendMessage(ChatColor.AQUA + "To respond to this private message, type " + ChatColor.GRAY + "/PM <player> <message>");
                 }
-                TazpvpCore.messages.put(p.getUniqueId(), target.getUniqueId());
+                TazpvpCore.messages.put(target.getUniqueId(), p.getUniqueId());
             } else {
                 return true;
             }

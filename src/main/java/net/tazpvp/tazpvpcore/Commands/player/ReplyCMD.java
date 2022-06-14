@@ -20,6 +20,7 @@ public class ReplyCMD implements CommandExecutor {
                 if (target != null) {
                     target.sendMessage(ChatColor.DARK_AQUA + p.getName() + ": " + ChatColor.AQUA + msg);
                     p.sendMessage(ChatColor.DARK_AQUA + "Replied to " + ChatColor.AQUA + target.getName() + ": " + ChatColor.AQUA + msg);
+                    return true;
                 }
             }
         }
