@@ -27,23 +27,19 @@ public class PrivateMessageCMD implements CommandExecutor, Listener{
 
             if (args.length >= 2) {
                 Player target = p.getServer().getPlayer(args[0]);
-                if (target == null) { p.sendMessage(ChatColor.RED + "This player does not exist."); return; }
-                if (target.getName().equals(p.getName())) { p.sendMessage(ChatColor.RED + "You cannot private message yourself!"); return;}
+                if (target == null) { p.sendMessage(ChatColor.RED + "This player does not exist."); return true; }
+                if (target.getName().equals(p.getName())) { p.sendMessage(ChatColor.RED + "You cannot private message yourself!"); return true;}
 
                 String msg = StringUtils.buildString(args, 1);
                 target.sendMessage( ChatColor.DARK_AQUA + "From " + ChatColor.AQUA + p.getName() + ": "  + ChatColor.WHITE + msg);
                 p.sendMessage(ChatColor.DARK_AQUA + "To " + ChatColor.AQUA + (args[0]) + ": " + ChatColor.WHITE + msg);
                 target.playSound(target.getLocation(), Sound.BLOCK_NOTE_BLOCK_CHIME, 1, 1);
+                if (!TazpvpCore.messages.containsKey(p)) {
+                    p.sendMessage(ChatColor.AQUA + "To respond to this private message, type " + ChatColor.GRAY + "/PM <player> <message>");
+                }
                 TazpvpCore.messages.put(p.getUniqueId(), target.getUniqueId());
-                if (!TazpvpCore.newPm.contains(p)) {
-                    TazpvpCore.newPm.add(p);
-                }
-                if (!TazpvpCore.newPm.contains(target)) {
-                    target.sendMessage(ChatColor.AQUA + "To respond to this private message, type " + ChatColor.GRAY + "/PM <player> <message>");
-                    TazpvpCore.newPm.add(target);
-                }
             } else {
-                return false;
+                return true;
             }
         }
         return true;
