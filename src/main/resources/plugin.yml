@@ -93,7 +93,5 @@ commands:
     description: "get the discord link"
   store:
     description: "get the store link"
-  reply:
-    aliases:
-      - r
+  re:
     description: "reply to a message"
