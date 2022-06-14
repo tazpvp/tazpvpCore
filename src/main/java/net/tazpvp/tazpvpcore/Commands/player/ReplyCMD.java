@@ -14,9 +14,9 @@ public class ReplyCMD implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
         if (commandSender instanceof Player p) {
-            String msg = StringUtils.buildString(strings, 1);
+            String msg = StringUtils.buildString(strings, 0);
             if (TazpvpCore.messages.containsKey(p.getUniqueId())) {
-                Player target = Bukkit.getPlayer(TazpvpCore.messages.get(p));
+                Player target = Bukkit.getPlayer(TazpvpCore.messages.get(p.getUniqueId()));
                 if (target != null) {
                     target.sendMessage(ChatColor.DARK_AQUA + "From " + ChatColor.AQUA + p.getName() + ": "  + ChatColor.WHITE + msg);
                     p.sendMessage(ChatColor.DARK_AQUA + "To " + ChatColor.AQUA + target.getName() + ": " + ChatColor.WHITE + msg);
