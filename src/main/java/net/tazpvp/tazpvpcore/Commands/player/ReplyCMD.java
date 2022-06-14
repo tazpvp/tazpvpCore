@@ -15,13 +15,15 @@ public class ReplyCMD implements CommandExecutor {
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
         if (commandSender instanceof Player p) {
             String msg = StringUtils.buildString(strings, 1);
-            if (TazpvpCore.messages.containsKey(p)) {
+            if (TazpvpCore.messages.containsKey(p.getUniqueId())) {
                 Player target = Bukkit.getPlayer(TazpvpCore.messages.get(p));
                 if (target != null) {
                     target.sendMessage(ChatColor.DARK_AQUA + "From " + ChatColor.AQUA + p.getName() + ": "  + ChatColor.WHITE + msg);
                     p.sendMessage(ChatColor.DARK_AQUA + "To " + ChatColor.AQUA + target.getName() + ": " + ChatColor.WHITE + msg);
                     return true;
                 }
+            } else {
+                p.sendMessage(ChatColor.RED + "You have no one to reply to!");
             }
         }
         return false;

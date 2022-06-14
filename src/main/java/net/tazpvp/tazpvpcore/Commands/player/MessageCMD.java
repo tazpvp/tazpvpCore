@@ -33,8 +33,8 @@ public class MessageCMD implements CommandExecutor, Listener{
                 target.sendMessage( ChatColor.DARK_AQUA + "From " + ChatColor.AQUA + p.getName() + ": "  + ChatColor.WHITE + msg);
                 p.sendMessage(ChatColor.DARK_AQUA + "To " + ChatColor.AQUA + (args[0]) + ": " + ChatColor.WHITE + msg);
                 target.playSound(target.getLocation(), Sound.BLOCK_NOTE_BLOCK_CHIME, 1, 1);
-                if (!TazpvpCore.messages.containsKey(target)) {
-                    p.sendMessage(ChatColor.AQUA + "To respond to this private message, type " + ChatColor.GRAY + "/re <message>");
+                if (!TazpvpCore.messages.containsKey(target.getUniqueId())) {
+                    p.sendMessage(ChatColor.AQUA + "To respond to this pm, type " + ChatColor.GRAY + "/re <message>");
                 }
                 TazpvpCore.messages.put(target.getUniqueId(), p.getUniqueId());
             } else {
