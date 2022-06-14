@@ -18,8 +18,8 @@ public class ReplyCMD implements CommandExecutor {
             if (TazpvpCore.messages.containsKey(p)) {
                 Player target = Bukkit.getPlayer(TazpvpCore.messages.get(p));
                 if (target != null) {
-                    target.sendMessage(ChatColor.DARK_AQUA + p.getName() + ": " + ChatColor.AQUA + msg);
-                    p.sendMessage(ChatColor.DARK_AQUA + "Replied to " + ChatColor.AQUA + target.getName() + ": " + ChatColor.AQUA + msg);
+                    target.sendMessage(ChatColor.DARK_AQUA + "From " + ChatColor.AQUA + p.getName() + ": "  + ChatColor.WHITE + msg);
+                    p.sendMessage(ChatColor.DARK_AQUA + "To " + ChatColor.AQUA + target.getName() + ": " + ChatColor.WHITE + msg);
                     return true;
                 }
             }

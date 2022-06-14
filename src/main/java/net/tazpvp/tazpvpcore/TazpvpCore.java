@@ -60,10 +60,6 @@ public final class TazpvpCore extends JavaPlugin implements Listener {
         keepItems.add(Material.DIAMOND_CHESTPLATE);
         keepItems.add(Material.DIAMOND_LEGGINGS);
         keepItems.add(Material.DIAMOND_BOOTS);
-        
-        
-
-
     }
 
     @Override
@@ -83,7 +79,7 @@ public final class TazpvpCore extends JavaPlugin implements Listener {
         getCommand("clearchat").setExecutor(new ClearChatCMD());
         getCommand("speed").setExecutor(new SpeedCMD());
         getCommand("alert").setExecutor(new AlertCMD());
-        getCommand("pm").setExecutor(new PrivateMessageCMD());
+        getCommand("pm").setExecutor(new MessageCMD());
         getCommand("clear").setExecutor(new InvClearCMD());
         getCommand("help").setExecutor(new HelpCMD());
         getCommand("apply").setExecutor(new ApplyCMD());
@@ -93,6 +89,7 @@ public final class TazpvpCore extends JavaPlugin implements Listener {
         getCommand("vanish").setExecutor(new VanishCMD());
         getCommand("discord").setExecutor(new DiscordCMD());
         getCommand("store").setExecutor(new StoreCMD());
+        getCommand("reply").setExecutor(new ReplyCMD());
     }
 
     public void registerEvents() {

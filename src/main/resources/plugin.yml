@@ -92,6 +92,8 @@ commands:
   discord:
     description: "get the discord link"
   store:
-    aliases:
-      - buy
     description: "get the store link"
+  reply:
+    aliases:
+      - r
+    description: "reply to a message"
