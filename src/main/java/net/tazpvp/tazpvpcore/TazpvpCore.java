@@ -8,10 +8,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public final class TazpvpCore extends JavaPlugin implements Listener {
     public static final HashMap<Player, Boolean> inInvseeGui = new HashMap<>();
@@ -20,7 +17,7 @@ public final class TazpvpCore extends JavaPlugin implements Listener {
     public static ArrayList<Material> Blocks = new ArrayList<>();
     public static List<Player> Vanished = new ArrayList<>();
     public static List<Material> keepItems = new ArrayList<>();
-    public static HashMap<Player, Player> messages = new HashMap<>();
+    public static HashMap<UUID, UUID> messages = new HashMap<>();
 
 
     @Override
