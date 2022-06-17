@@ -15,14 +15,6 @@ public class PlayerUtils {
         p.sendMessage(ChatColor.DARK_AQUA + "Gamemode: " + ChatColor.AQUA + gm);
     }
 
-    public static void hidePlayer(Player p) {
-        p.hidePlayer(TazpvpCore.getInstance(), p);
-    }
-
-    public static void showPlayer(Player p) {
-        p.showPlayer(TazpvpCore.getInstance(), p);
-    }
-
     public static void fly(Player p) {
         p.setAllowFlight(true);
         p.sendMessage(ChatColor.DARK_AQUA + "Flight: " + ChatColor.AQUA + "enabled");
