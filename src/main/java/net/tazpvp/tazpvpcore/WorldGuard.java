@@ -22,18 +22,9 @@ import static net.tazpvp.tazpvpcore.Utils.ChatUtils.startswith;
 
 public class WorldGuard implements Listener {
     @EventHandler
-    public void blockPlace(BlockPlaceEvent e) {
-        Player p = e.getPlayer();
-        Block b = e.getBlock();
-        if (p.getGameMode() == GameMode.SURVIVAL) {
-            b.setMetadata("PlayerPlaced", new FixedMetadataValue(TazpvpCore.getInstance(), true));
-        }
-    }
-
-    @EventHandler
     public void blockedCmds(PlayerCommandPreprocessEvent e){
         String msg = e.getMessage();
-        if (startswith(msg, "/minecraft:") || startswith(msg, "/pl ") || startswith(msg, "/plugins ")){
+        if (startswith(msg, "/minecraft:")){
             e.setCancelled(true);
         }
     }
@@ -67,11 +58,6 @@ public class WorldGuard implements Listener {
     public void vineGrowth(BlockGrowEvent e) {
         e.setCancelled(true);
     }
-
-//    @EventHandler
-//    public void feed(FoodLevelChangeEvent e) {
-//        Player p = (Player) e.getEntity();
-//    }
 
     @EventHandler
     public void blockUse(PlayerInteractEvent e) {
