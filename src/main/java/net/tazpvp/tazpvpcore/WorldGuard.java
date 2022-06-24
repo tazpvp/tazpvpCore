@@ -22,17 +22,6 @@ import static net.tazpvp.tazpvpcore.Utils.ChatUtils.startswith;
 
 public class WorldGuard implements Listener {
     @EventHandler
-    public void blockBreak(BlockBreakEvent e) {
-        Player p = e.getPlayer();
-        Block b = e.getBlock();
-        if (p.getGameMode() == GameMode.SURVIVAL) {
-            if(p.getWorld().getName().equals("arena") || p.getWorld().getName().equals("ban")) {
-                if (!isPlayerPlaced(b)) { e.setCancelled(true); }
-            }
-        }
-    }
-
-    @EventHandler
     public void blockPlace(BlockPlaceEvent e) {
         Player p = e.getPlayer();
         Block b = e.getBlock();
