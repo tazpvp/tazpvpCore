@@ -2,6 +2,7 @@ package net.tazpvp.tazpvpcore;
 
 import org.bukkit.GameMode;
 import org.bukkit.Material;
+import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -13,6 +14,7 @@ import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.event.player.PlayerTeleportEvent;
 import org.bukkit.event.weather.WeatherChangeEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.metadata.FixedMetadataValue;
@@ -96,6 +98,15 @@ public class WorldGuard implements Listener {
     public void itemCraft(org.bukkit.event.inventory.CraftItemEvent e) {
         if (!e.getWhoClicked().isOp()) {
             e.setCancelled(true);
+        }
+    }
+
+    @EventHandler
+    final void onTeleport(PlayerTeleportEvent e) {
+        if (!e.isCancelled() && !e.getPlayer().hasPermission("tazpvp.*")) {
+            if (e.getCause().equals(PlayerTeleportEvent.TeleportCause.SPECTATE)) {
+                e.setCancelled(true);
+            }
         }
     }
 }
