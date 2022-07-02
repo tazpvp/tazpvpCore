@@ -1,5 +1,6 @@
 package net.tazpvp.tazpvpcore;
 
+import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.World;
@@ -103,9 +104,10 @@ public class WorldGuard implements Listener {
 
     @EventHandler
     final void onTeleport(PlayerTeleportEvent e) {
-        if (!e.isCancelled() && !e.getPlayer().hasPermission("tazpvp.*")) {
+        if (!e.getPlayer().hasPermission("tazpvp.*")) {
             if (e.getCause().equals(PlayerTeleportEvent.TeleportCause.SPECTATE)) {
                 e.setCancelled(true);
+                e.getPlayer().sendMessage(ChatColor.RED + "You cannot teleport while spectating.");
             }
         }
     }
