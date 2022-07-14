@@ -30,8 +30,8 @@ public class MessageCMD implements CommandExecutor, Listener{
                 if (target.getName().equals(p.getName())) { p.sendMessage(ChatColor.RED + "You cannot private message yourself!"); return true;}
 
                 String msg = StringUtils.buildString(args, 1);
-                target.sendMessage( ChatColor.DARK_AQUA + "From " + ChatColor.AQUA + p.getName() + ": "  + ChatColor.RED + msg);
-                p.sendMessage(ChatColor.DARK_AQUA + "To " + ChatColor.AQUA + (args[0]) + ": " + ChatColor.RED + msg);
+                target.sendMessage( ChatColor.DARK_AQUA + "From " + ChatColor.RED + p.getName() + ": "  + ChatColor.AQUA + msg);
+                p.sendMessage(ChatColor.DARK_AQUA + "To " + ChatColor.RED + (args[0]) + ": " + ChatColor.AQUA + msg);
                 target.playSound(target.getLocation(), Sound.BLOCK_NOTE_BLOCK_CHIME, 1, 1);
                 if (!TazpvpCore.messages.containsKey(target.getUniqueId())) {
                     target.sendMessage(ChatColor.AQUA + "To respond to this pm, type " + ChatColor.GRAY + "/re <message>");
