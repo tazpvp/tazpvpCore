@@ -36,6 +36,7 @@ public class MessageCMD implements CommandExecutor, Listener{
                 if (!TazpvpCore.messages.containsKey(target.getUniqueId())) {
                     target.sendMessage(ChatColor.AQUA + "To respond to this pm, type " + ChatColor.GRAY + "/re <message>");
                 }
+                TazpvpCore.messages.put(p.getUniqueId(), target.getUniqueId());
                 TazpvpCore.messages.put(target.getUniqueId(), p.getUniqueId());
             } else {
                 return true;
