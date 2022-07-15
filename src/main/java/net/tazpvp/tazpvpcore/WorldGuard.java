@@ -33,11 +33,6 @@ public class WorldGuard implements Listener {
     }
 
     @EventHandler
-    public void blockPhysics(BlockPhysicsEvent e) {
-        e.setCancelled(true);
-    }
-
-    @EventHandler
     public void blockChange(BlockFromToEvent e) {
         e.setCancelled(true);
     }
