@@ -86,9 +86,6 @@ commands:
     description: "server rules"
   ad:
     description: "get the advertisement for this server."
-  vanish:
-    description: "vanish"
-    usage: /vanish [player]
   discord:
     description: "get the discord link"
   store:

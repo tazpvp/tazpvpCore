@@ -80,7 +80,6 @@ public final class TazpvpCore extends JavaPlugin implements Listener {
         getCommand("appeal").setExecutor(new AppealCMD());
         getCommand("rules").setExecutor(new RulesCMD());
         getCommand("ad").setExecutor(new AdCMD());
-        getCommand("vanish").setExecutor(new VanishCMD());
         getCommand("discord").setExecutor(new DiscordCMD());
         getCommand("store").setExecutor(new StoreCMD());
         getCommand("re").setExecutor(new ReplyCMD());

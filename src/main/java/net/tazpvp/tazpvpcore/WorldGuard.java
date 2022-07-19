@@ -9,6 +9,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.*;
+import org.bukkit.event.entity.EntityExplodeEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryType;
@@ -105,5 +106,10 @@ public class WorldGuard implements Listener {
                 e.getPlayer().sendMessage(ChatColor.RED + "You cannot teleport while spectating.");
             }
         }
+    }
+
+    @EventHandler
+    public void onExplode(EntityExplodeEvent e) {
+        e.setCancelled(true);
     }
 }
