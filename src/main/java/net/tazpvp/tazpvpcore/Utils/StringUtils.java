@@ -30,7 +30,7 @@ public class StringUtils {
     }
 
     public static String s1 = " \n" +
-            ChatColor.RED + " How to get Stats:\n" +
+            ChatColor.AQUA + "" + ChatColor.BOLD + " STATS\n" +
             " \n" +
             ChatColor.AQUA + " Shards: " + ChatColor.DARK_AQUA + "Levels, Heads, Generator\n" +
             ChatColor.AQUA + " Coins: " + ChatColor.DARK_AQUA + "Kills, Achievements, Streaks, Ores\n" +
@@ -39,17 +39,17 @@ public class StringUtils {
             " \n" +
             ChatColor.GREEN + " [1/3]" + ChatColor.DARK_GREEN + " type '/help 2' for the next page.";
     public static String s2 = " \n" +
-            ChatColor.RED + " How to get Items:\n" +
+            ChatColor.AQUA + "" + ChatColor.BOLD + " ITEMS\n" +
             " \n" +
             ChatColor.YELLOW + " Shards: " + ChatColor.GOLD + "Trade player heads to 'Bub' in the sewers\n" +
-            ChatColor.YELLOW + " Swords: " + ChatColor.GOLD + "Spin the Wheel o Blades at spawn\n" +
+            ChatColor.YELLOW + " Swords: " + ChatColor.GOLD + "Spin the Wheel at spawn, or get one per 10 levels\n" +
             ChatColor.YELLOW + " Food/Tools: " + ChatColor.GOLD + "Interact with 'Maxim' at spawn\n" +
             ChatColor.YELLOW + " Armor/Bow Upgrades: " + ChatColor.GOLD + "Interact with 'Frank' at the tower\n" +
             ChatColor.YELLOW + " Pickaxe Upgrades: " + ChatColor.GOLD + "Interact with 'Caesar' at the mine\n" +
             " \n" +
             ChatColor.GREEN + " [2/3]" + ChatColor.DARK_GREEN + " type '/help 3' for the next page.";
     public static String s3 = " \n" +
-            ChatColor.RED + " Helpful Commands:\n" +
+            ChatColor.AQUA + "" + ChatColor.BOLD + " COMMANDS\n" +
             " \n" +
             ChatColor.WHITE + " /report " + ChatColor.GRAY + "Report rule breakers.\n" +
             ChatColor.WHITE + " /apply " + ChatColor.GRAY + "Apply for a staff position.\n" +
@@ -57,6 +57,7 @@ public class StringUtils {
             ChatColor.WHITE + " /discord " + ChatColor.GRAY + "Join the community.\n" +
             ChatColor.WHITE + " /duel " + ChatColor.GRAY + "Battle versus another player.\n" +
             ChatColor.WHITE + " /ad " + ChatColor.GRAY + "Receive the server advertisement to copy.\n" +
+            ChatColor.WHITE + " /afk " + ChatColor.GRAY + "Gain rewards every 5 minutes while afk.\n" +
             " \n" +
             ChatColor.GREEN + " [3/3]" + ChatColor.DARK_GREEN + " type '/help' for the next page.";
 }
